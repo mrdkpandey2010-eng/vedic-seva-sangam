@@ -84,6 +84,8 @@ async function runTests() {
 
     // TEST 5: Public Devotee Booking Submission & Reference Generation
     console.log('Test 5: Devotee Booking Submission...');
+    // Clean up previous test bookings to ensure idempotency
+    db.exec("DELETE FROM bookings WHERE client_email = 'test@example.com'");
     const bookingPayload = {
       service_name: 'रुद्राभिषेक एवं महारुद्र पूजन',
       client_name: 'परीक्षण यजमान (Test Devotee)',
