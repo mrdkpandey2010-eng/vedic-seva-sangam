@@ -1,0 +1,22 @@
+{
+  "name": "acharya-ashwani-kumar-shukla-vedic-platform",
+  "version": "2.0.0",
+  "description": "आचार्य पं० अश्वनी कुमार शुक्ल — वैदिक एवं सनातन सेवा केंद्र (Gorakhpur, UP). Production Vedic Astrology, Purohit Services, Yajman Bahi-Khata & Sanatan Knowledge Platform.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/verify.js"
+  },
+  "keywords": [
+    "vedic",
+    "astrology",
+    "panchang",
+    "kundli",
+    "gorakhpur",
+    "purohit",
+    "acharya-ashwani-shukla",
+    "karmakanda"
+  ],
+  "author": "आचार्य पं० अश्वनी कुमार शुक्ल",
+  "license": "MIT"
+}

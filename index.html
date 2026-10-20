@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>वैदिक सेवा संगम | Sanatan Vedic & Pandit Services Platform</title>
-  
+  <title>आचार्य पं० अश्वनी कुमार शुक्ल — वैदिक एवं सनातन सेवा केंद्र (गोरखपुर)</title>
+  <meta name="description" content="आचार्य पं० अश्वनी कुमार शुक्ल, गोरखपुर (उत्तर प्रदेश)। वैदिक ज्योतिष, जन्म कुण्डली, कर्मकाण्ड, श्रीमद्भागवत कथा वाचन, दैनिक पंचांग एवं यजमान सेवा केंद्र। संपर्क: 7309441019">
+  <meta name="keywords" content="आचार्य अश्वनी कुमार शुक्ल, ज्योतिषी गोरखपुर, पंडित गोरखपुर, श्रीमद्भागवत कथा वाचक, कर्मकाण्ड, पंचांग, जन्म कुण्डली, यजमान बहीखाता">
+  <meta name="author" content="आचार्य पं० अश्वनी कुमार शुक्ल">
+  <meta property="og:title" content="आचार्य पं० अश्वनी कुमार शुक्ल — वैदिक एवं सनातन सेवा केंद्र">
+  <meta property="og:description" content="गोरखपुर, उत्तर प्रदेश। प्रामाणिक वैदिक कर्मकाण्ड, ज्योतिष, कथा वाचन एवं सनातन ज्ञान। संपर्क: 7309441019">
+  <meta property="og:type" content="website">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -13,6 +19,15 @@
       theme: {
         extend: {
           colors: {
+            maroon: {
+              50: '#fdf2f4',
+              100: '#fbe6e9',
+              200: '#f7cfd6',
+              700: '#8c1d34',
+              800: '#751a2d',
+              900: '#5c0d1c',
+              950: '#3e040f'
+            },
             saffron: {
               50: '#fff7ed',
               100: '#ffedd5',
@@ -23,8 +38,7 @@
               600: '#ea580c',
               700: '#c2410c',
               800: '#9a3412',
-              900: '#7c2d12',
-              950: '#431407',
+              900: '#7c2d12'
             },
             gold: {
               50: '#fefce8',
@@ -36,30 +50,25 @@
               600: '#ca8a04',
               700: '#a16207',
               800: '#854d0e',
-              900: '#713f12',
-            },
-            maroon: {
-              800: '#831843',
-              900: '#701a75',
-              950: '#500724',
+              900: '#713f12'
             },
             ivory: {
               50: '#ffffff',
               100: '#fdfbf7',
               200: '#faf5ee',
               300: '#f4ece1',
-              400: '#ede1d1',
+              400: '#ede1d1'
             }
           },
           fontFamily: {
             devanagari: ['"Noto Serif Devanagari"', 'serif'],
             royal: ['Cinzel', 'serif'],
-            body: ['Poppins', 'sans-serif'],
+            body: ['Poppins', 'sans-serif']
           },
           boxShadow: {
-            'sacred': '0 10px 25px -5px rgba(234, 88, 12, 0.15), 0 8px 10px -6px rgba(202, 138, 4, 0.1)',
-            'gold-glow': '0 0 20px rgba(234, 179, 8, 0.35)',
-            'saffron-glow': '0 0 25px rgba(249, 115, 22, 0.35)'
+            'sacred': '0 10px 25px -5px rgba(92, 13, 28, 0.12), 0 8px 10px -6px rgba(202, 138, 4, 0.08)',
+            'gold-glow': '0 0 20px rgba(202, 138, 4, 0.35)',
+            'maroon-glow': '0 0 25px rgba(92, 13, 28, 0.35)'
           }
         }
       }
@@ -69,33 +78,25 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome 6 CDN for sacred & UI icons -->
+  <!-- FontAwesome 6 CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    /* Custom Sacred Aesthetics */
     body {
       background-color: #fdfbf7;
-      color: #3b200b;
+      color: #381a10;
       font-family: 'Poppins', 'Noto Serif Devanagari', sans-serif;
       background-image: 
         radial-gradient(#fed7aa 0.75px, transparent 0.75px),
         radial-gradient(#fde047 0.75px, #fdfbf7 0.75px);
-      background-size: 30px 30px;
-      background-position: 0 0, 15px 15px;
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
     }
+    .font-devanagari { font-family: 'Noto Serif Devanagari', serif; }
+    .font-royal { font-family: 'Cinzel', serif; }
 
-    .font-devanagari {
-      font-family: 'Noto Serif Devanagari', serif;
-    }
-
-    .font-royal {
-      font-family: 'Cinzel', serif;
-    }
-
-    /* Traditional Golden Border Frame */
     .sacred-border {
       border: 2px solid #ca8a04;
       position: relative;
@@ -103,10 +104,10 @@
     .sacred-border::before {
       content: "卐";
       position: absolute;
-      top: -10px;
-      left: 12px;
+      top: -11px;
+      left: 14px;
       background: #fdfbf7;
-      color: #ea580c;
+      color: #c2410c;
       font-size: 14px;
       padding: 0 4px;
       font-weight: bold;
@@ -114,8 +115,8 @@
     .sacred-border::after {
       content: "ॐ";
       position: absolute;
-      top: -10px;
-      right: 12px;
+      top: -11px;
+      right: 14px;
       background: #fdfbf7;
       color: #ca8a04;
       font-size: 14px;
@@ -123,94 +124,52 @@
       font-weight: bold;
     }
 
-    /* Kundli SVG styles */
-    .kundli-line {
-      stroke: #c2410c;
-      stroke-width: 2.2;
-    }
-    .kundli-box {
-      fill: #fffbeb;
-      transition: all 0.2s ease;
-    }
-    .kundli-box:hover {
-      fill: #fef3c7;
-      cursor: pointer;
-    }
-    .kundli-sign {
-      fill: #78350f;
-      font-size: 13px;
-      font-weight: 700;
-      font-family: 'Cinzel', serif;
-    }
-    .kundli-planet {
-      font-size: 11px;
-      font-weight: 700;
-      font-family: 'Noto Serif Devanagari', serif;
-    }
+    .kundli-line { stroke: #c2410c; stroke-width: 2.2; }
+    .kundli-box { fill: #fffbeb; transition: all 0.2s ease; }
+    .kundli-box:hover { fill: #fef3c7; cursor: pointer; }
+    .kundli-sign { fill: #78350f; font-size: 13px; font-weight: 700; font-family: 'Cinzel', serif; }
+    .kundli-planet { font-size: 11px; font-weight: 700; font-family: 'Noto Serif Devanagari', serif; }
 
-    /* Print Styles */
-    @media print {
-      body {
-        background: white !important;
-        color: black !important;
-      }
-      .no-print {
-        display: none !important;
-      }
-      .print-only {
-        display: block !important;
-      }
-      .sacred-card {
-        box-shadow: none !important;
-        border: 1px solid #ccc !important;
-      }
-    }
-
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #fef3c7;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #f97316;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #ea580c;
-    }
-
-    /* Flashing live indicator */
-    @keyframes pulse-red {
+    @keyframes pulse-dot {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.15); }
+      50% { opacity: 0.4; transform: scale(1.18); }
     }
-    .live-dot {
-      animation: pulse-red 1.5s infinite ease-in-out;
+    .live-dot { animation: pulse-dot 1.5s infinite ease-in-out; }
+
+    @media print {
+      body { background: white !important; color: black !important; }
+      .no-print { display: none !important; }
+      .print-only { display: block !important; }
     }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #fef3c7; }
+    ::-webkit-scrollbar-thumb { background: #ea580c; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #c2410c; }
   </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
+<body class="min-h-screen flex flex-col antialiased selection:bg-orange-600 selection:text-white">
 
-  <!-- ================= TOP SACRED NOTIFICATION STRIP ================= -->
-  <div class="bg-gradient-to-r from-red-900 via-orange-800 to-amber-900 text-amber-100 text-xs py-2 px-4 shadow-sm border-b border-gold-600/30">
+  <!-- ================= TOP VERIFIED BANNER & DIRECT CONTACT BAR ================= -->
+  <div class="bg-gradient-to-r from-maroon-950 via-maroon-900 to-saffron-950 text-amber-100 text-xs py-2 px-4 shadow-sm border-b border-gold-600/40">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex items-center space-x-2">
         <span class="text-amber-400 font-bold text-sm">ॐ</span>
-        <span class="font-devanagari tracking-wide font-medium" id="top-mantra-strip">
-          सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः। सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥
+        <span class="font-devanagari font-semibold tracking-wide text-[11px] sm:text-xs">
+          ॥ श्री गणेशाय नमः ॥ धर्मो रक्षति रक्षितः ॥ आचार्य पं० अश्वनी कुमार शुक्ल (गोरखपुर, उ०प्र०)
         </span>
       </div>
-      <div class="flex items-center space-x-4 text-xs">
-        <div class="flex items-center space-x-1.5 bg-black/25 px-2.5 py-0.5 rounded-full border border-amber-500/30">
-          <i class="fa-regular fa-clock text-amber-400 text-[11px]"></i>
-          <span id="header-live-clock" class="font-mono text-amber-200">--:--:--</span>
-        </div>
-        <div class="flex items-center space-x-1 bg-amber-950/40 px-2 py-0.5 rounded border border-amber-600/40">
-          <span class="text-orange-300 font-semibold text-[11px]" id="header-samvat-badge">विक्रम संवत् 2083</span>
-        </div>
+      <div class="flex items-center space-x-4 text-xs font-semibold">
+        <!-- Direct Call Link -->
+        <a href="tel:+917309441019" class="flex items-center space-x-1.5 bg-black/30 hover:bg-black/50 px-2.5 py-0.5 rounded-full border border-amber-400/30 transition text-amber-200">
+          <i class="fa-solid fa-phone text-emerald-400 text-[11px]"></i>
+          <span>7309441019</span>
+        </a>
+        <!-- Direct WhatsApp Link -->
+        <a href="https://wa.me/917309441019?text=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A3%E0%A4%BE%E0%A4%AE%20%E0%A4%86%E0%A4%9Release%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE%2F%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A4%BF%E0%A4%B7%20%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6%20%E0%A4%B9%E0%A5%87%E0%A4%A4%E0%A5%81%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4" target="_blank" rel="noopener" class="flex items-center space-x-1 bg-emerald-900/60 hover:bg-emerald-800 px-2.5 py-0.5 rounded-full border border-emerald-500/40 text-emerald-200 transition">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+          <span class="hidden sm:inline">WhatsApp</span>
+        </a>
         <!-- Language Switcher -->
         <button id="lang-toggle-btn" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs px-2.5 py-0.5 rounded-full transition shadow flex items-center space-x-1">
           <i class="fa-solid fa-language text-xs"></i>
@@ -225,74 +184,62 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         
-        <!-- Logo & Platform Identity -->
-        <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('panchang')">
-          <div class="relative w-12 h-12 rounded-full bg-gradient-to-tr from-orange-600 via-amber-500 to-yellow-400 flex items-center justify-center shadow-lg border-2 border-gold-300 transform transition hover:rotate-12">
+        <!-- Platform Identity & Acharya Logo -->
+        <a href="#/" class="flex items-center space-x-3 cursor-pointer group">
+          <div class="relative w-12 h-12 rounded-full bg-gradient-to-tr from-maroon-900 via-saffron-600 to-yellow-500 flex items-center justify-center shadow-lg border-2 border-gold-300 transform transition group-hover:rotate-6">
             <span class="text-2xl text-white font-bold drop-shadow">ॐ</span>
             <div class="absolute -bottom-1 -right-1 bg-red-700 text-amber-200 text-[9px] font-bold px-1 rounded-full border border-yellow-300">
-              वैदिक
+              गोरखपुर
             </div>
           </div>
           <div>
-            <div class="flex items-center space-x-2">
-              <h1 class="font-devanagari font-bold text-xl sm:text-2xl text-orange-950 tracking-tight" data-i18n="brand_title">
-                वैदिक सेवा संगम
-              </h1>
-              <span class="hidden sm:inline-block bg-amber-100 text-orange-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full border border-amber-300">
-                PRO 2.0
-              </span>
-            </div>
-            <p class="text-xs text-amber-800 font-medium font-devanagari flex items-center gap-1" data-i18n="brand_subtitle">
-              <span>सम्पूर्ण सनातन पुरोहित व भक्त मंच</span>
+            <h1 class="font-devanagari font-bold text-lg sm:text-xl text-maroon-950 tracking-tight leading-tight">
+              आचार्य पं० अश्वनी कुमार शुक्ल
+            </h1>
+            <p class="text-xs text-saffron-800 font-semibold font-devanagari flex items-center gap-1">
+              <span>वैदिक एवं सनातन सेवा केंद्र</span>
               <span class="text-orange-500">•</span>
-              <span class="text-gray-500 hidden md:inline">Panchang, Kundli, Samagri & Darshan</span>
+              <span class="text-gray-500 font-normal">गोरखपुर, उ०प्र०</span>
             </p>
           </div>
-        </div>
+        </a>
 
-        <!-- Navigation Tabs -->
-        <nav class="hidden lg:flex items-center space-x-1">
-          <button onclick="switchTab('panchang')" id="tab-btn-panchang" class="nav-tab active-tab px-3.5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center space-x-2 bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow">
-            <i class="fa-solid fa-sun text-amber-300"></i>
-            <span data-i18n="nav_panchang">दैनिक पंचांग</span>
-          </button>
-          <button onclick="switchTab('kundli')" id="tab-btn-kundli" class="nav-tab px-3.5 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-orange-700 hover:bg-orange-50 transition-all flex items-center space-x-2">
-            <i class="fa-solid fa-dharmachakra text-amber-600"></i>
-            <span data-i18n="nav_kundli">जन्म कुण्डली</span>
-          </button>
-          <button onclick="switchTab('toolkit')" id="tab-btn-toolkit" class="nav-tab px-3.5 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-orange-700 hover:bg-orange-50 transition-all flex items-center space-x-2">
-            <i class="fa-solid fa-book-open text-orange-600"></i>
-            <span data-i18n="nav_toolkit">पुरोहित टूलकिट</span>
-          </button>
-          <button onclick="switchTab('darshan')" id="tab-btn-darshan" class="nav-tab px-3.5 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-orange-700 hover:bg-orange-50 transition-all flex items-center space-x-2 relative">
-            <i class="fa-solid fa-gopuram text-red-600"></i>
-            <span data-i18n="nav_darshan">लाइव दर्शन</span>
-            <span class="flex h-2 w-2 relative -top-1">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-            </span>
-          </button>
-          <button onclick="switchTab('chants')" id="tab-btn-chants" class="nav-tab px-3.5 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-orange-700 hover:bg-orange-50 transition-all flex items-center space-x-2">
-            <i class="fa-solid fa-om text-purple-700"></i>
-            <span data-i18n="nav_chants">वैदिक मंत्र व जप</span>
-          </button>
+        <!-- Desktop Navigation Bar -->
+        <nav class="hidden xl:flex items-center space-x-1 text-xs font-bold text-gray-800">
+          <a href="#/" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">मुख्य पृष्ठ</a>
+          <a href="#/about" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">आचार्य परिचय</a>
+          <a href="#/astrology" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">ज्योतिष व कुण्डली</a>
+          <a href="#/panchang" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">पंचांग व मुहूर्त</a>
+          <a href="#/puja-services" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">पूजा व कर्मकाण्ड</a>
+          <a href="#/katha-vachan" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">कथा वाचन</a>
+          <a href="#/live-darshan" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">लाइव दर्शन</a>
+          <a href="#/mantras" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">मंत्र व जप</a>
+          <a href="#/library" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">ज्ञान पुस्तकालय</a>
+          <a href="#/events" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">कार्यक्रम</a>
+          <a href="#/samagri" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">सामग्री चेकलिस्ट</a>
+          <a href="#/contact" class="nav-link px-2.5 py-2 rounded-lg hover:text-saffron-700 hover:bg-orange-50 transition">संपर्क</a>
         </nav>
 
         <!-- Right Quick Actions -->
         <div class="flex items-center space-x-2">
-          <!-- Temple Bell Chime Action -->
-          <button id="temple-bell-btn" title="मंदिर की घंटी बजाएं (Ring Temple Bell)" class="group relative bg-amber-100 hover:bg-amber-200 text-amber-800 p-2.5 rounded-full border border-amber-300 transition shadow hover:shadow-md active:scale-95 flex items-center justify-center">
-            <i class="fa-solid fa-bell text-lg text-amber-700 group-hover:rotate-12 transition-transform"></i>
-            <span class="hidden xl:inline text-xs font-bold ml-1.5 text-amber-900" data-i18n="ring_bell">घंटी</span>
+          <!-- Primary Booking Action Button -->
+          <a href="#/booking" class="bg-gradient-to-r from-saffron-600 via-orange-600 to-amber-600 hover:from-saffron-700 hover:to-orange-700 text-white font-bold text-xs sm:text-sm px-3.5 py-2 rounded-xl transition shadow-md flex items-center space-x-1.5 active:scale-95">
+            <i class="fa-solid fa-calendar-check text-amber-200"></i>
+            <span>ऑनलाइन बुकिंग</span>
+          </a>
+
+          <!-- Temple Bell Chime -->
+          <button id="temple-bell-btn" title="मंदिर की घंटी बजाएं (Ring Temple Bell)" class="bg-amber-100 hover:bg-amber-200 text-amber-900 p-2 rounded-full border border-amber-300 transition shadow active:scale-90 flex items-center justify-center">
+            <i class="fa-solid fa-bell text-amber-700"></i>
           </button>
 
-          <!-- Audio Mini Player Trigger -->
-          <button onclick="switchTab('chants')" title="वैदिक नाद व तानपूरा (Vedic Audio)" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white p-2.5 rounded-full transition shadow flex items-center justify-center">
-            <i class="fa-solid fa-music text-sm"></i>
-          </button>
+          <!-- Admin Portal Trigger -->
+          <a href="#/admin" title="प्रशासनिक नियंत्रण कक्ष (Admin)" class="bg-maroon-900 hover:bg-maroon-950 text-amber-300 p-2 rounded-full border border-gold-400 transition shadow flex items-center justify-center">
+            <i class="fa-solid fa-user-shield text-xs"></i>
+          </a>
 
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-toggle" class="lg:hidden text-gray-700 hover:text-orange-600 p-2 rounded-lg focus:outline-none">
+          <!-- Mobile Menu Hamburger -->
+          <button id="mobile-menu-toggle" class="xl:hidden text-gray-800 hover:text-saffron-700 p-2 rounded-lg focus:outline-none">
             <i class="fa-solid fa-bars text-xl"></i>
           </button>
         </div>
@@ -301,1692 +248,115 @@
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-nav-menu" class="hidden lg:hidden bg-amber-50 border-t border-amber-200 px-4 py-3 space-y-2">
-      <button onclick="switchTab('panchang')" class="w-full text-left px-3 py-2 rounded-md font-medium text-gray-800 hover:bg-orange-100 flex items-center space-x-2">
-        <i class="fa-solid fa-sun text-amber-600 w-6"></i>
-        <span data-i18n="nav_panchang">दैनिक पंचांग</span>
-      </button>
-      <button onclick="switchTab('kundli')" class="w-full text-left px-3 py-2 rounded-md font-medium text-gray-800 hover:bg-orange-100 flex items-center space-x-2">
-        <i class="fa-solid fa-dharmachakra text-amber-600 w-6"></i>
-        <span data-i18n="nav_kundli">जन्म कुण्डली</span>
-      </button>
-      <button onclick="switchTab('toolkit')" class="w-full text-left px-3 py-2 rounded-md font-medium text-gray-800 hover:bg-orange-100 flex items-center space-x-2">
-        <i class="fa-solid fa-book-open text-orange-600 w-6"></i>
-        <span data-i18n="nav_toolkit">पुरोहित टूलकिट</span>
-      </button>
-      <button onclick="switchTab('darshan')" class="w-full text-left px-3 py-2 rounded-md font-medium text-gray-800 hover:bg-orange-100 flex items-center space-x-2">
-        <i class="fa-solid fa-gopuram text-red-600 w-6"></i>
-        <span data-i18n="nav_darshan">लाइव दर्शन</span>
-      </button>
-      <button onclick="switchTab('chants')" class="w-full text-left px-3 py-2 rounded-md font-medium text-gray-800 hover:bg-orange-100 flex items-center space-x-2">
-        <i class="fa-solid fa-om text-purple-700 w-6"></i>
-        <span data-i18n="nav_chants">वैदिक मंत्र व जप</span>
-      </button>
+    <div id="mobile-nav-menu" class="hidden xl:hidden bg-amber-50 border-t border-amber-200 px-4 py-3 space-y-1.5 max-h-[75vh] overflow-y-auto">
+      <a href="#/" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">🏠 मुख्य पृष्ठ (Home)</a>
+      <a href="#/about" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">📜 आचार्य परिचय (About)</a>
+      <a href="#/astrology" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">🔮 ज्योतिष एवं कुण्डली सेवाएँ</a>
+      <a href="#/panchang" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">🌞 पंचांग एवं शुभ मुहूर्त (गोरखपुर)</a>
+      <a href="#/puja-services" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">🪔 पूजा एवं कर्मकाण्ड</a>
+      <a href="#/katha-vachan" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">📖 श्रीमद्भागवत व राम कथा वाचन</a>
+      <a href="#/live-darshan" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">🛕 लाइव दर्शन एवं अनुष्ठान</a>
+      <a href="#/mantras" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">📿 वैदिक मंत्र एवं १०८ जप माला</a>
+      <a href="#/library" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">📚 सनातन ज्ञान एवं शोध पुस्तकालय</a>
+      <a href="#/events" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">📅 आगामी कार्यक्रम एवं कथाएं</a>
+      <a href="#/samagri" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">📋 पूजा सामग्री चेकलिस्ट</a>
+      <a href="#/booking" class="block px-3 py-2 rounded-md font-bold text-saffron-700 bg-orange-100">✨ ऑनलाइन अनुष्ठान बुकिंग</a>
+      <a href="#/dakshina" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">🪙 दक्षिणा एवं दान</a>
+      <a href="#/contact" class="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-orange-100">📞 संपर्क एवं परामर्श (7309441019)</a>
+      <a href="#/legal" class="block px-3 py-2 rounded-md font-semibold text-gray-600 hover:bg-orange-100">⚖️ नीति, नियम व अस्वीकरण</a>
+      <a href="#/admin" class="block px-3 py-2 rounded-md font-bold text-maroon-900 bg-amber-200">🛡️ प्रशासनिक नियंत्रण कक्ष (Admin)</a>
     </div>
   </header>
 
   <!-- ================= GLOBAL TOAST CONTAINER ================= -->
   <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col space-y-2 pointer-events-none"></div>
 
-  <!-- ================= MAIN CONTENT AREA ================= -->
-  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
-
-    <!-- ========================================================================= -->
-    <!-- MODULE 1: VEDIC PANCHANG & MUHURTA CORE -->
-    <!-- ========================================================================= -->
-    <section id="section-panchang" class="tab-content transition-all duration-300">
-      
-      <!-- Top Date & City Controller Bar -->
-      <div class="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-100 rounded-2xl p-4 sm:p-6 border-2 border-gold-400/50 shadow-sacred mb-8">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <div class="flex items-center space-x-2">
-              <span class="text-xs font-bold uppercase tracking-wider text-orange-700 bg-orange-100 px-2.5 py-0.5 rounded-full border border-orange-300">
-                Lahiri Ayanamsa Algorithm (चित्रापक्षीय)
-              </span>
-              <span id="panchang-active-status-badge" class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
-                शुभ मुहूर्त सक्रिय
-              </span>
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-devanagari font-bold text-gray-900 mt-1" data-i18n="panchang_heading">
-              दैनिक वैदिक पंचांग एवं शुभ-अशुभ मुहूर्त
-            </h2>
-            <p class="text-sm text-gray-600 font-devanagari" id="panchang-date-banner">
-              गणना आधार: स्थानीय सूर्योदय एवं चंद्रोदय समय
-            </p>
-          </div>
-
-          <!-- Controls: City & Date Selectors -->
-          <div class="flex flex-wrap items-center gap-2.5">
-            <!-- City Selection -->
-            <div class="flex items-center space-x-1.5 bg-white px-3 py-1.5 rounded-xl border border-gold-300 shadow-sm">
-              <i class="fa-solid fa-location-dot text-orange-600 text-sm"></i>
-              <select id="panchang-city-select" class="bg-transparent text-sm font-semibold text-gray-800 focus:outline-none cursor-pointer">
-                <option value="varanasi">वाराणसी (काशी) [25.31°N, 82.97°E]</option>
-                <option value="ayodhya">अयोध्या धाम [26.79°N, 82.20°E]</option>
-                <option value="ujjain">उज्जैन (महाकाल) [23.17°N, 75.78°E]</option>
-                <option value="delhi">नई दिल्ली [28.61°N, 77.20°E]</option>
-                <option value="mumbai">मुंबई [19.07°N, 72.87°E]</option>
-                <option value="bengaluru">बेंगलुरु [12.97°N, 77.59°E]</option>
-                <option value="kolkata">कोलकाता [22.57°N, 88.36°E]</option>
-                <option value="haridwar">हरिद्वार [29.94°N, 78.16°E]</option>
-                <option value="london">London (UK) [51.50°N, -0.12°E]</option>
-                <option value="newyork">New York (USA) [40.71°N, -74.00°W]</option>
-              </select>
-            </div>
-
-            <!-- Date Selector -->
-            <div class="flex items-center space-x-1.5 bg-white px-3 py-1.5 rounded-xl border border-gold-300 shadow-sm">
-              <i class="fa-regular fa-calendar-days text-orange-600 text-sm"></i>
-              <input type="date" id="panchang-date-picker" class="bg-transparent text-sm font-semibold text-gray-800 focus:outline-none cursor-pointer">
-            </div>
-
-            <!-- Today Button -->
-            <button id="panchang-today-btn" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs px-3 py-2 rounded-xl transition shadow">
-              <i class="fa-solid fa-rotate-left mr-1"></i>
-              <span data-i18n="today_btn">आज</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick Summary Cards (Pancha-Anga) -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 mb-8">
-        
-        <!-- 1. Tithi -->
-        <div class="bg-white rounded-2xl p-4 border-2 border-amber-200 shadow-sm hover:shadow-md transition relative overflow-hidden group">
-          <div class="absolute -right-2 -bottom-2 text-amber-100 group-hover:text-amber-200 transition text-5xl font-bold select-none">
-            १
-          </div>
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-orange-700 uppercase tracking-wider" data-i18n="tithi_label">तिथि</span>
-            <i class="fa-solid fa-moon text-amber-500 text-sm"></i>
-          </div>
-          <h3 id="panchang-tithi-name" class="text-lg font-devanagari font-bold text-gray-900 leading-snug">--</h3>
-          <p id="panchang-tithi-paksha" class="text-xs text-orange-600 font-semibold mt-0.5">--</p>
-          <div class="mt-2 text-[11px] text-gray-500" id="panchang-tithi-ends">पूर्णता: --</div>
-        </div>
-
-        <!-- 2. Nakshatra -->
-        <div class="bg-white rounded-2xl p-4 border-2 border-amber-200 shadow-sm hover:shadow-md transition relative overflow-hidden group">
-          <div class="absolute -right-2 -bottom-2 text-amber-100 group-hover:text-amber-200 transition text-5xl font-bold select-none">
-            २
-          </div>
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-orange-700 uppercase tracking-wider" data-i18n="nakshatra_label">नक्षत्र</span>
-            <i class="fa-solid fa-star text-amber-500 text-sm"></i>
-          </div>
-          <h3 id="panchang-nakshatra-name" class="text-lg font-devanagari font-bold text-gray-900 leading-snug">--</h3>
-          <p id="panchang-nakshatra-lord" class="text-xs text-amber-700 font-semibold mt-0.5">स्वामी: --</p>
-          <div class="mt-2 text-[11px] text-gray-500" id="panchang-nakshatra-ends">समाप्ति: --</div>
-        </div>
-
-        <!-- 3. Yoga -->
-        <div class="bg-white rounded-2xl p-4 border-2 border-amber-200 shadow-sm hover:shadow-md transition relative overflow-hidden group">
-          <div class="absolute -right-2 -bottom-2 text-amber-100 group-hover:text-amber-200 transition text-5xl font-bold select-none">
-            ३
-          </div>
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-orange-700 uppercase tracking-wider" data-i18n="yoga_label">योग</span>
-            <i class="fa-solid fa-circle-nodes text-amber-500 text-sm"></i>
-          </div>
-          <h3 id="panchang-yoga-name" class="text-lg font-devanagari font-bold text-gray-900 leading-snug">--</h3>
-          <p id="panchang-yoga-nature" class="text-xs text-emerald-600 font-semibold mt-0.5">शुभ योग</p>
-          <div class="mt-2 text-[11px] text-gray-500" id="panchang-yoga-ends">अवधि: --</div>
-        </div>
-
-        <!-- 4. Karana -->
-        <div class="bg-white rounded-2xl p-4 border-2 border-amber-200 shadow-sm hover:shadow-md transition relative overflow-hidden group">
-          <div class="absolute -right-2 -bottom-2 text-amber-100 group-hover:text-amber-200 transition text-5xl font-bold select-none">
-            ४
-          </div>
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-orange-700 uppercase tracking-wider" data-i18n="karana_label">करण</span>
-            <i class="fa-solid fa-feather text-amber-500 text-sm"></i>
-          </div>
-          <h3 id="panchang-karana-name" class="text-lg font-devanagari font-bold text-gray-900 leading-snug">--</h3>
-          <p id="panchang-karana-type" class="text-xs text-gray-600 font-semibold mt-0.5">चर करण</p>
-          <div class="mt-2 text-[11px] text-gray-500" id="panchang-karana-ends">उपरांत: --</div>
-        </div>
-
-        <!-- 5. Vaar / Day -->
-        <div class="bg-white rounded-2xl p-4 border-2 border-amber-200 shadow-sm hover:shadow-md transition relative overflow-hidden group">
-          <div class="absolute -right-2 -bottom-2 text-amber-100 group-hover:text-amber-200 transition text-5xl font-bold select-none">
-            ५
-          </div>
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-orange-700 uppercase tracking-wider" data-i18n="vaar_label">वार (दिन)</span>
-            <i class="fa-solid fa-sun text-orange-500 text-sm"></i>
-          </div>
-          <h3 id="panchang-vaar-name" class="text-lg font-devanagari font-bold text-gray-900 leading-snug">--</h3>
-          <p id="panchang-vaar-lord" class="text-xs text-orange-700 font-semibold mt-0.5">ग्रह अधिपति: --</p>
-          <div class="mt-2 text-[11px] text-gray-500" id="panchang-samvat-year">संवत्सर: --</div>
-        </div>
-
-      </div>
-
-      <!-- Sun / Moon & Auspicious Timings Master Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        
-        <!-- Left: Solar & Lunar Cycle -->
-        <div class="bg-gradient-to-b from-white to-amber-50 rounded-2xl p-5 border-2 border-gold-300 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center space-x-2 pb-3 border-b border-amber-200 mb-4">
-              <i class="fa-solid fa-arrows-spin text-orange-600"></i>
-              <h3 class="font-devanagari font-bold text-base text-gray-900" data-i18n="solar_lunar_cycle">
-                सूर्य एवं चंद्र कालचक्र
-              </h3>
-            </div>
-
-            <!-- Sun Times -->
-            <div class="grid grid-cols-2 gap-3 mb-4">
-              <div class="bg-orange-50/80 p-3 rounded-xl border border-orange-200 flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-sm">
-                  <i class="fa-solid fa-sun text-lg"></i>
-                </div>
-                <div>
-                  <div class="text-[11px] font-bold text-orange-900 uppercase" data-i18n="sunrise">सूर्योदय</div>
-                  <div id="panchang-sunrise" class="font-mono font-bold text-base text-gray-900">06:18 AM</div>
-                </div>
-              </div>
-              <div class="bg-rose-50/80 p-3 rounded-xl border border-rose-200 flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-sm">
-                  <i class="fa-solid fa-cloud-sun text-lg"></i>
-                </div>
-                <div>
-                  <div class="text-[11px] font-bold text-rose-900 uppercase" data-i18n="sunset">सूर्यास्त</div>
-                  <div id="panchang-sunset" class="font-mono font-bold text-base text-gray-900">05:42 PM</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Moon Times -->
-            <div class="grid grid-cols-2 gap-3 mb-4">
-              <div class="bg-blue-50/80 p-3 rounded-xl border border-blue-200 flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-sm">
-                  <i class="fa-solid fa-moon text-lg"></i>
-                </div>
-                <div>
-                  <div class="text-[11px] font-bold text-blue-900 uppercase" data-i18n="moonrise">चंद्रोदय</div>
-                  <div id="panchang-moonrise" class="font-mono font-bold text-base text-gray-900">03:45 PM</div>
-                </div>
-              </div>
-              <div class="bg-indigo-50/80 p-3 rounded-xl border border-indigo-200 flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center shadow-sm">
-                  <i class="fa-solid fa-moon text-lg opacity-70"></i>
-                </div>
-                <div>
-                  <div class="text-[11px] font-bold text-indigo-900 uppercase" data-i18n="moonset">चंद्रास्त</div>
-                  <div id="panchang-moonset" class="font-mono font-bold text-base text-gray-900">04:12 AM</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Vedic Calendar Indices -->
-            <div class="space-y-2 text-xs pt-2 border-t border-amber-200">
-              <div class="flex justify-between py-1">
-                <span class="text-gray-600" data-i18n="hindu_month">हिन्दू मास व पक्ष:</span>
-                <span id="panchang-hindu-month" class="font-bold text-orange-950 font-devanagari">कार्तिक, कृष्ण पक्ष</span>
-              </div>
-              <div class="flex justify-between py-1">
-                <span class="text-gray-600" data-i18n="ritu_ayana">ऋतु एवं अयन:</span>
-                <span id="panchang-ritu-ayana" class="font-bold text-orange-950 font-devanagari">शरद ऋतु, दक्षिणायन</span>
-              </div>
-              <div class="flex justify-between py-1">
-                <span class="text-gray-600" data-i18n="moon_sign_current">चंद्र राशि:</span>
-                <span id="panchang-moon-sign" class="font-bold text-orange-950 font-devanagari">वृषभ (Taurus)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Center: Shubh Muhurtas (Auspicious Timings) -->
-        <div class="bg-white rounded-2xl p-5 border-2 border-emerald-300 shadow-sm relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold px-3 py-0.5 rounded-bl-xl uppercase tracking-wider">
-            शुभ वेला
-          </div>
-          <div class="flex items-center space-x-2 pb-3 border-b border-emerald-100 mb-4">
-            <i class="fa-solid fa-shield-halved text-emerald-600"></i>
-            <h3 class="font-devanagari font-bold text-base text-gray-900" data-i18n="shubh_muhurta">
-              शुभ मुहूर्त (मांगलिक कार्य हेतु)
-            </h3>
-          </div>
-
-          <div class="space-y-3">
-            <!-- Abhijit Muhurta -->
-            <div class="p-3 bg-emerald-50/70 rounded-xl border border-emerald-200">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                  <span class="font-bold text-sm text-emerald-950 font-devanagari" data-i18n="abhijit_muhurta">अभिजीत मुहूर्त</span>
-                  <span class="text-[10px] bg-emerald-200 text-emerald-900 px-1.5 py-0.2 rounded font-bold">सर्वश्रेष्ठ</span>
-                </div>
-                <span id="muhurta-abhijit-time" class="font-mono text-sm font-bold text-emerald-900">11:43 AM - 12:31 PM</span>
-              </div>
-              <p class="text-[11px] text-emerald-800 mt-1" data-i18n="abhijit_desc">सभी शुभ, नवीन कार्य, व्यापार व यात्रा हेतु सर्वोत्तम।</p>
-            </div>
-
-            <!-- Brahma Muhurta -->
-            <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-200">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-                  <span class="font-bold text-sm text-amber-950 font-devanagari" data-i18n="brahma_muhurta">ब्रह्म मुहूर्त</span>
-                  <span class="text-[10px] bg-amber-200 text-amber-900 px-1.5 py-0.2 rounded font-bold">साधना</span>
-                </div>
-                <span id="muhurta-brahma-time" class="font-mono text-sm font-bold text-amber-900">04:42 AM - 05:30 AM</span>
-              </div>
-              <p class="text-[11px] text-amber-800 mt-1" data-i18n="brahma_desc">ईश्वर स्मरण, योग, ध्यान व अध्ययन हेतु दिव्य समय।</p>
-            </div>
-
-            <!-- Amrit Kaal -->
-            <div class="p-3 bg-teal-50/70 rounded-xl border border-teal-200">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span>
-                  <span class="font-bold text-sm text-teal-950 font-devanagari" data-i18n="amrit_kaal">अमृत काल</span>
-                </div>
-                <span id="muhurta-amrit-time" class="font-mono text-sm font-bold text-teal-900">02:15 PM - 03:48 PM</span>
-              </div>
-              <p class="text-[11px] text-teal-800 mt-1" data-i18n="amrit_desc">धार्मिक अनुष्ठान, पूजन व यज्ञ हेतु परम फलदायी।</p>
-            </div>
-
-            <!-- Godhuli Muhurta -->
-            <div class="p-3 bg-orange-50/70 rounded-xl border border-orange-200">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
-                  <span class="font-bold text-sm text-orange-950 font-devanagari" data-i18n="godhuli_muhurta">गोधूलि मुहूर्त</span>
-                </div>
-                <span id="muhurta-godhuli-time" class="font-mono text-sm font-bold text-orange-900">05:30 PM - 05:54 PM</span>
-              </div>
-              <p class="text-[11px] text-orange-800 mt-1" data-i18n="godhuli_desc">संध्या वंदन, दीप प्रज्वलन व शांति पूजन समय।</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Ashubh Kaal (Inauspicious Times: Rahu Kaal etc.) -->
-        <div class="bg-white rounded-2xl p-5 border-2 border-rose-300 shadow-sm relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-rose-700 text-white text-[10px] font-bold px-3 py-0.5 rounded-bl-xl uppercase tracking-wider">
-            वर्जित वेला
-          </div>
-          <div class="flex items-center space-x-2 pb-3 border-b border-rose-100 mb-4">
-            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i>
-            <h3 class="font-devanagari font-bold text-base text-gray-900" data-i18n="ashubh_kaal">
-              अशुभ काल (त्याज्य समय)
-            </h3>
-          </div>
-
-          <div class="space-y-3">
-            <!-- Rahu Kaal -->
-            <div class="p-3 bg-rose-50/80 rounded-xl border-2 border-rose-300">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-rose-600 live-dot"></span>
-                  <span class="font-bold text-sm text-rose-950 font-devanagari" data-i18n="rahu_kaal">राहु काल</span>
-                  <span class="text-[10px] bg-rose-200 text-rose-950 px-1.5 py-0.2 rounded font-bold">अति वर्जित</span>
-                </div>
-                <span id="muhurta-rahu-time" class="font-mono text-sm font-bold text-rose-900">03:00 PM - 04:30 PM</span>
-              </div>
-              <p class="text-[11px] text-rose-800 mt-1" data-i18n="rahu_desc">इस समय कोई भी नवीन कार्य, अनुबंध अथवा यात्रा प्रारंभ न करें।</p>
-            </div>
-
-            <!-- Yamaganda -->
-            <div class="p-3 bg-gray-50 rounded-xl border border-gray-200">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-gray-600"></span>
-                  <span class="font-bold text-sm text-gray-900 font-devanagari" data-i18n="yamaganda">यमगण्ड काल</span>
-                </div>
-                <span id="muhurta-yamaganda-time" class="font-mono text-sm font-bold text-gray-800">09:15 AM - 10:45 AM</span>
-              </div>
-              <p class="text-[11px] text-gray-600 mt-1" data-i18n="yamaganda_desc">मृत्युंजय अधिपति काल, मांगलिक कार्यों में विघ्न संभव।</p>
-            </div>
-
-            <!-- Gulika Kaal -->
-            <div class="p-3 bg-amber-50/50 rounded-xl border border-amber-200">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
-                  <span class="font-bold text-sm text-amber-950 font-devanagari" data-i18n="gulika_kaal">गुलिक काल</span>
-                </div>
-                <span id="muhurta-gulika-time" class="font-mono text-sm font-bold text-amber-900">12:15 PM - 01:45 PM</span>
-              </div>
-              <p class="text-[11px] text-amber-800 mt-1" data-i18n="gulika_desc">शनि पुत्र गुलिक का प्रभाव, विशेष शुभ कार्यों से बचें।</p>
-            </div>
-
-            <!-- Durmuhurta -->
-            <div class="p-3 bg-orange-50/50 rounded-xl border border-orange-200">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-orange-600"></span>
-                  <span class="font-bold text-sm text-orange-950 font-devanagari" data-i18n="durmuhurta">दुर्मुहूर्त</span>
-                </div>
-                <span id="muhurta-durmuhurta-time" class="font-mono text-sm font-bold text-orange-900">08:42 AM - 09:30 AM</span>
-              </div>
-              <p class="text-[11px] text-orange-800 mt-1" data-i18n="durmuhurta_desc">अशुभ मुहूर्त, देव प्रतिष्ठा व गृह प्रवेश सर्वथा वर्जित।</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Live Muhurta Status Banner -->
-      <div id="live-muhurta-banner" class="rounded-xl p-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white flex items-center justify-between shadow-md">
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-xl">
-            🕉️
-          </div>
-          <div>
-            <div class="text-xs uppercase font-extrabold tracking-wider text-amber-200" data-i18n="current_moment_status">वर्तमान काल स्थिति</div>
-            <div id="current-muhurta-summary-text" class="text-base font-bold font-devanagari">
-              शुभ वेला: सामान्य समय सक्रिय है (कोई अशुभ काल नहीं)
-            </div>
-          </div>
-        </div>
-        <div class="hidden sm:block text-right">
-          <div class="text-xs text-amber-100" data-i18n="system_status">गणना परिशुद्धता</div>
-          <div class="text-sm font-mono font-bold">Lahiri Ephemeris 100% Client-Side</div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- MODULE 2: DYNAMIC KUNDLI & RASHI CALCULATOR -->
-    <!-- ========================================================================= -->
-    <section id="section-kundli" class="tab-content hidden transition-all duration-300">
-      
-      <!-- Kundli Banner -->
-      <div class="bg-gradient-to-r from-orange-900 via-amber-900 to-amber-950 text-amber-100 rounded-2xl p-6 shadow-sacred mb-8 border border-gold-500/30">
-        <div class="max-w-3xl">
-          <span class="bg-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-amber-400/30">
-            Vedic Horoscopy & Astro-Analytics
-          </span>
-          <h2 class="text-3xl font-devanagari font-bold text-white mt-2" data-i18n="kundli_heading">
-            जन्म कुण्डली एवं राशि-नक्षत्र विश्लेषक
-          </h2>
-          <p class="text-sm text-amber-200/90 font-devanagari mt-1" data-i18n="kundli_subheading">
-            सटीक वैदिक गणितीय सूत्रों, निरयण लग्न चक्र, अष्टकवर्ग व पञ्चमहाभूत (तत्व) आधार पर विस्तृत फलकथन।
-          </p>
-        </div>
-      </div>
-
-      <!-- Main Kundli Container: Form on Left, Output & Chart on Right -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Left: Input Form (4 cols) -->
-        <div class="lg:col-span-4">
-          <div class="bg-white rounded-2xl p-6 border-2 border-gold-300 shadow-sacred sticky top-24">
-            <div class="flex items-center space-x-2 pb-3 border-b border-amber-200 mb-5">
-              <i class="fa-solid fa-id-card text-orange-600"></i>
-              <h3 class="font-devanagari font-bold text-lg text-gray-900" data-i18n="birth_details_heading">
-                जातक जन्म विवरण
-              </h3>
-            </div>
-
-            <form id="kundli-form" class="space-y-4">
-              <!-- Name -->
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="full_name">
-                  जातक का पूरा नाम *
-                </label>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-orange-600">
-                    <i class="fa-solid fa-user"></i>
-                  </span>
-                  <input type="text" id="k-name" required value="आदित्य शर्मा" placeholder="उदा. आदित्य शर्मा"
-                    class="w-full pl-9 pr-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-                </div>
-              </div>
-
-              <!-- Gender -->
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="gender">
-                  लिंग *
-                </label>
-                <div class="grid grid-cols-2 gap-2">
-                  <label class="flex items-center justify-center p-2 rounded-xl border border-amber-300 bg-amber-50/50 cursor-pointer hover:bg-orange-50 font-semibold text-xs text-gray-800">
-                    <input type="radio" name="k-gender" value="male" checked class="text-orange-600 focus:ring-orange-500 mr-2">
-                    <span data-i18n="male">पुरुष (Male)</span>
-                  </label>
-                  <label class="flex items-center justify-center p-2 rounded-xl border border-amber-300 bg-amber-50/50 cursor-pointer hover:bg-orange-50 font-semibold text-xs text-gray-800">
-                    <input type="radio" name="k-gender" value="female" class="text-orange-600 focus:ring-orange-500 mr-2">
-                    <span data-i18n="female">स्त्री (Female)</span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Date of Birth -->
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="dob">
-                  जन्म दिनांक (DOB) *
-                </label>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-orange-600">
-                    <i class="fa-solid fa-calendar"></i>
-                  </span>
-                  <input type="date" id="k-dob" required value="1996-08-15"
-                    class="w-full pl-9 pr-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-                </div>
-              </div>
-
-              <!-- Time of Birth -->
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="tob">
-                  जन्म समय (TOB) *
-                </label>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-orange-600">
-                    <i class="fa-solid fa-clock"></i>
-                  </span>
-                  <input type="time" id="k-tob" required value="06:30"
-                    class="w-full pl-9 pr-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-                </div>
-              </div>
-
-              <!-- Place of Birth -->
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="pob">
-                  जन्म स्थान (Place of Birth) *
-                </label>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-orange-600">
-                    <i class="fa-solid fa-map-pin"></i>
-                  </span>
-                  <select id="k-pob" class="w-full pl-9 pr-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500 cursor-pointer">
-                    <option value="25.3176,82.9739,5.5,वाराणसी (काशी)">वाराणसी (काशी), उत्तर प्रदेश</option>
-                    <option value="28.6139,77.2090,5.5,नई दिल्ली">नई दिल्ली (राजधानी)</option>
-                    <option value="19.0760,72.8777,5.5,मुंबई">मुंबई, महाराष्ट्र</option>
-                    <option value="23.1765,75.7885,5.5,उज्जैन">उज्जैन (महाकाल), मध्य प्रदेश</option>
-                    <option value="26.7922,82.1998,5.5,अयोध्या">अयोध्या धाम, उत्तर प्रदेश</option>
-                    <option value="29.9457,78.1642,5.5,हरिद्वार">हरिद्वार, उत्तराखण्ड</option>
-                    <option value="12.9716,77.5946,5.5,बेंगलुरु">बेंगलुरु, कर्नाटक</option>
-                    <option value="22.5726,88.3639,5.5,कोलकाता">कोलकाता, पश्चिम बंगाल</option>
-                    <option value="26.9124,75.7873,5.5,जयपुर">जयपुर, राजस्थान</option>
-                    <option value="13.0827,80.2707,5.5,चेन्नई">चेन्नई, तमिलनाडु</option>
-                    <option value="27.7172,85.3240,5.75,काठमांडू">काठमांडू, नेपाल</option>
-                  </select>
-                </div>
-              </div>
-
-              <button type="submit" class="w-full bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold py-3 rounded-xl transition shadow-lg transform active:scale-95 flex items-center justify-center space-x-2">
-                <i class="fa-solid fa-dharmachakra"></i>
-                <span data-i18n="generate_kundli_btn">कुण्डली चक्र एवं फलकथन बनाएं</span>
-              </button>
-            </form>
-
-            <div class="mt-4 pt-3 border-t border-amber-200 text-center">
-              <button onclick="printKundliReport()" class="text-xs font-semibold text-orange-800 hover:text-orange-950 flex items-center justify-center space-x-1.5 mx-auto">
-                <i class="fa-solid fa-print"></i>
-                <span data-i18n="print_kundli_pdf">कुण्डली रिपोर्ट प्रिंट / PDF सहेजें</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Kundli Chart & Analytical Engine Output (8 cols) -->
-        <div class="lg:col-span-8 space-y-6">
-          
-          <!-- Key Astro Identity Cards (Rashi, Nakshatra, Tatva, Lagna) -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
-            <!-- Chandra Rashi -->
-            <div class="bg-gradient-to-br from-amber-50 to-orange-100 p-4 rounded-2xl border-2 border-gold-300 shadow-sm">
-              <div class="text-[11px] font-bold text-orange-800 uppercase" data-i18n="chandra_rashi">चन्द्र राशि (Moon Sign)</div>
-              <div id="res-chandra-rashi" class="text-lg font-devanagari font-bold text-orange-950 mt-1">सिंह (Leo)</div>
-              <div id="res-rashi-lord" class="text-xs text-orange-700 font-semibold mt-0.5">राशि स्वामी: सूर्य</div>
-            </div>
-
-            <!-- Janma Nakshatra -->
-            <div class="bg-gradient-to-br from-amber-50 to-orange-100 p-4 rounded-2xl border-2 border-gold-300 shadow-sm">
-              <div class="text-[11px] font-bold text-orange-800 uppercase" data-i18n="janma_nakshatra">जन्म नक्षत्र व चरण</div>
-              <div id="res-janma-nakshatra" class="text-lg font-devanagari font-bold text-orange-950 mt-1">मघा (चरण १)</div>
-              <div id="res-nakshatra-lord" class="text-xs text-orange-700 font-semibold mt-0.5">नक्षत्र स्वामी: केतु</div>
-            </div>
-
-            <!-- Lagna (Ascendant) -->
-            <div class="bg-gradient-to-br from-amber-50 to-orange-100 p-4 rounded-2xl border-2 border-gold-300 shadow-sm">
-              <div class="text-[11px] font-bold text-orange-800 uppercase" data-i18n="lagna_sign">लग्न (Ascendant)</div>
-              <div id="res-lagna-sign" class="text-lg font-devanagari font-bold text-orange-950 mt-1">कर्क (Cancer)</div>
-              <div id="res-lagna-lord" class="text-xs text-orange-700 font-semibold mt-0.5">लग्न स्वामी: चन्द्र</div>
-            </div>
-
-            <!-- Tatva (Element) -->
-            <div class="bg-gradient-to-br from-amber-50 to-orange-100 p-4 rounded-2xl border-2 border-gold-300 shadow-sm">
-              <div class="text-[11px] font-bold text-orange-800 uppercase" data-i18n="tatva_label">तत्व (Element)</div>
-              <div id="res-tatva" class="text-lg font-devanagari font-bold text-orange-950 mt-1">अग्नि तत्व (Fire)</div>
-              <div id="res-gana" class="text-xs text-orange-700 font-semibold mt-0.5">गण: राक्षस | नाड़ी: अंत्य</div>
-            </div>
-          </div>
-
-          <!-- The Traditional North-Indian D-1 Kundli Chart -->
-          <div class="bg-white rounded-2xl p-6 border-2 border-gold-400 shadow-sacred">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-amber-200 mb-4 gap-2">
-              <div>
-                <h3 class="font-devanagari font-bold text-lg text-gray-900 flex items-center gap-2">
-                  <span class="text-orange-600">ॐ</span>
-                  <span data-i18n="lagna_chart_title">लग्न कुण्डली चक्र (D-1 Rashi Chakra)</span>
-                </h3>
-                <p class="text-xs text-gray-500 font-devanagari" data-i18n="lagna_chart_sub">
-                  उत्तर-भारतीय परम्परागत हीरक शैली (Diamond Chart) - ग्रह स्थिति एवं भाव दिग्दर्शन
-                </p>
-              </div>
-              <span class="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
-                लग्न भाव: प्रथम (Tanu Bhava)
-              </span>
-            </div>
-
-            <!-- SVG North Indian Kundli Container -->
-            <div class="flex justify-center items-center py-2">
-              <div class="relative w-full max-w-[480px] aspect-square bg-[#fffef7] rounded-xl border-4 border-amber-700 shadow-inner p-2">
-                
-                <!-- SVG Canvas -->
-                <svg id="north-kundli-svg" viewBox="0 0 400 400" class="w-full h-full select-none">
-                  <!-- Outer Rect -->
-                  <rect x="0" y="0" width="400" height="400" fill="#fffdfa" stroke="#b45309" stroke-width="3"/>
-                  
-                  <!-- Diagonal Lines -->
-                  <line x1="0" y1="0" x2="400" y2="400" class="kundli-line"/>
-                  <line x1="0" y1="400" x2="400" y2="0" class="kundli-line"/>
-                  
-                  <!-- Central Diamond -->
-                  <polygon points="200,0 400,200 200,400 0,200" fill="#fffbeb" stroke="#b45309" stroke-width="2.5"/>
-
-                  <!-- Internal Cross for Diamond -->
-                  <line x1="0" y1="0" x2="200" y2="200" stroke="#ca8a04" stroke-width="1.2" stroke-dasharray="2,2"/>
-                  <line x1="400" y1="0" x2="200" y2="200" stroke="#ca8a04" stroke-width="1.2" stroke-dasharray="2,2"/>
-                  <line x1="0" y1="400" x2="200" y2="200" stroke="#ca8a04" stroke-width="1.2" stroke-dasharray="2,2"/>
-                  <line x1="400" y1="400" x2="200" y2="200" stroke="#ca8a04" stroke-width="1.2" stroke-dasharray="2,2"/>
-
-                  <!-- HOUSE 1: Top Diamond (Lagna) -->
-                  <text id="sign-h1" x="200" y="80" text-anchor="middle" class="kundli-sign">1</text>
-                  <text id="planets-h1" x="200" y="115" text-anchor="middle" class="kundli-planet fill-red-800">सूर्य, बुध</text>
-
-                  <!-- HOUSE 2: Top-Left Upper Triangle -->
-                  <text id="sign-h2" x="100" y="45" text-anchor="middle" class="kundli-sign">2</text>
-                  <text id="planets-h2" x="90" y="70" text-anchor="middle" class="kundli-planet fill-amber-800">शुक्र</text>
-
-                  <!-- HOUSE 3: Left-Top Triangle -->
-                  <text id="sign-h3" x="45" y="100" text-anchor="middle" class="kundli-sign">3</text>
-                  <text id="planets-h3" x="45" y="125" text-anchor="middle" class="kundli-planet fill-emerald-800"></text>
-
-                  <!-- HOUSE 4: Left Diamond (Sukha Bhava) -->
-                  <text id="sign-h4" x="100" y="205" text-anchor="middle" class="kundli-sign">4</text>
-                  <text id="planets-h4" x="90" y="235" text-anchor="middle" class="kundli-planet fill-blue-800">चन्द्र</text>
-
-                  <!-- HOUSE 5: Left-Bottom Triangle -->
-                  <text id="sign-h5" x="45" y="305" text-anchor="middle" class="kundli-sign">5</text>
-                  <text id="planets-h5" x="45" y="330" text-anchor="middle" class="kundli-planet fill-purple-800">शनि</text>
-
-                  <!-- HOUSE 6: Bottom-Left Lower Triangle -->
-                  <text id="sign-h6" x="100" y="365" text-anchor="middle" class="kundli-sign">6</text>
-                  <text id="planets-h6" x="90" y="340" text-anchor="middle" class="kundli-planet fill-orange-800"></text>
-
-                  <!-- HOUSE 7: Bottom Diamond (Jaya Bhava) -->
-                  <text id="sign-h7" x="200" y="325" text-anchor="middle" class="kundli-sign">7</text>
-                  <text id="planets-h7" x="200" y="295" text-anchor="middle" class="kundli-planet fill-red-700">मंगल</text>
-
-                  <!-- HOUSE 8: Bottom-Right Lower Triangle -->
-                  <text id="sign-h8" x="300" y="365" text-anchor="middle" class="kundli-sign">8</text>
-                  <text id="planets-h8" x="310" y="340" text-anchor="middle" class="kundli-planet fill-gray-800">राहु</text>
-
-                  <!-- HOUSE 9: Right-Bottom Triangle -->
-                  <text id="sign-h9" x="355" y="305" text-anchor="middle" class="kundli-sign">9</text>
-                  <text id="planets-h9" x="355" y="330" text-anchor="middle" class="kundli-planet fill-yellow-800">गुरु</text>
-
-                  <!-- HOUSE 10: Right Diamond (Karma Bhava) -->
-                  <text id="sign-h10" x="300" y="205" text-anchor="middle" class="kundli-sign">10</text>
-                  <text id="planets-h10" x="310" y="235" text-anchor="middle" class="kundli-planet fill-rose-800"></text>
-
-                  <!-- HOUSE 11: Right-Top Triangle -->
-                  <text id="sign-h11" x="355" y="100" text-anchor="middle" class="kundli-sign">11</text>
-                  <text id="planets-h11" x="355" y="125" text-anchor="middle" class="kundli-planet fill-gray-700">केतु</text>
-
-                  <!-- HOUSE 12: Top-Right Upper Triangle -->
-                  <text id="sign-h12" x="300" y="45" text-anchor="middle" class="kundli-sign">12</text>
-                  <text id="planets-h12" x="310" y="70" text-anchor="middle" class="kundli-planet fill-emerald-800"></text>
-                </svg>
-
-              </div>
-            </div>
-
-            <!-- Planetary Positions Legend Table -->
-            <div class="mt-4 overflow-x-auto">
-              <table class="w-full text-xs text-left border border-amber-200 rounded-lg overflow-hidden">
-                <thead class="bg-amber-100 text-orange-950 font-bold uppercase">
-                  <tr>
-                    <th class="p-2">ग्रह (Planet)</th>
-                    <th class="p-2">राशि (Sign)</th>
-                    <th class="p-2">अंश (Degrees)</th>
-                    <th class="p-2">नक्षत्र (Constellation)</th>
-                    <th class="p-2">भाव (House)</th>
-                    <th class="p-2">अवस्था (State)</th>
-                  </tr>
-                </thead>
-                <tbody id="planetary-positions-tbody" class="divide-y divide-amber-100 font-devanagari">
-                  <!-- Generated via JS -->
-                </tbody>
-              </table>
-            </div>
-
-          </div>
-
-          <!-- Sacred Astrological Recommendations (Lucky Gem, Rudraksha, Deity, Remedies) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            
-            <!-- Recommendations Box -->
-            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-5 border-2 border-gold-300 shadow-sm">
-              <h4 class="font-devanagari font-bold text-base text-orange-950 mb-3 flex items-center gap-2">
-                <i class="fa-solid fa-gem text-amber-600"></i>
-                <span data-i18n="favorable_elements">अनुकूल तत्व एवं शुभ रत्न</span>
-              </h4>
-              <ul class="space-y-2.5 text-xs text-gray-800">
-                <li class="flex justify-between items-center py-1 border-b border-amber-200">
-                  <span class="text-gray-600" data-i18n="lucky_gemstone">भाग्य रत्न (Gemstone):</span>
-                  <span id="res-gemstone" class="font-bold text-orange-900 font-devanagari">माणिक्य (Ruby) अथवा मोती</span>
-                </li>
-                <li class="flex justify-between items-center py-1 border-b border-amber-200">
-                  <span class="text-gray-600" data-i18n="lucky_rudraksha">शुभ रुद्राक्ष (Rudraksha):</span>
-                  <span id="res-rudraksha" class="font-bold text-orange-900 font-devanagari">१ मुखी अथवा ५ मुखी</span>
-                </li>
-                <li class="flex justify-between items-center py-1 border-b border-amber-200">
-                  <span class="text-gray-600" data-i18n="ishta_devata">इष्ट देवता (Ishta Devata):</span>
-                  <span id="res-ishta-devata" class="font-bold text-orange-900 font-devanagari">भगवान सूर्य नारायण / श्री हरि विष्णु</span>
-                </li>
-                <li class="flex justify-between items-center py-1 border-b border-amber-200">
-                  <span class="text-gray-600" data-i18n="lucky_color_num">शुभ रंग व अंक:</span>
-                  <span id="res-lucky-color-num" class="font-bold text-orange-900 font-devanagari">सुनहरा, नारंगी | शुभ अंक: १, ९</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Vimshottari Dasha Current Overview -->
-            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-5 border-2 border-gold-300 shadow-sm">
-              <h4 class="font-devanagari font-bold text-base text-orange-950 mb-3 flex items-center gap-2">
-                <i class="fa-solid fa-hourglass-half text-orange-600"></i>
-                <span data-i18n="dasha_overview">विंशोत्तरी महादशा आकलन</span>
-              </h4>
-              <div class="bg-white p-3 rounded-xl border border-amber-200 mb-2">
-                <div class="flex justify-between items-center text-xs">
-                  <span class="font-bold text-gray-700" data-i18n="current_mahadasha">वर्तमान महादशा:</span>
-                  <span id="res-current-dasha" class="font-bold text-orange-800 text-sm">बृहस्पति (Guru) महादशा</span>
-                </div>
-                <div class="text-[11px] text-gray-500 mt-1" id="res-dasha-duration">अवधि: 2021 से 2037 तक</div>
-              </div>
-              <p class="text-xs text-gray-700 leading-relaxed font-devanagari" id="res-dasha-impact">
-                गुरु की महादशा में ज्ञान, आध्यात्मिक उन्नति, समाज में मान-सम्मान एवं आर्थिक सुदृढ़ता के उत्तम योग निर्मित होते हैं।
-              </p>
-            </div>
-
-          </div>
-
-          <!-- Comprehensive Vedic Prediction Cards -->
-          <div class="bg-white rounded-2xl p-6 border-2 border-amber-200 shadow-sacred">
-            <h4 class="font-devanagari font-bold text-lg text-gray-900 mb-4 pb-2 border-b border-amber-200 flex items-center gap-2">
-              <i class="fa-solid fa-scroll text-orange-600"></i>
-              <span data-i18n="vedic_predictions_heading">विस्तृत वैदिक फलकथन एवं स्वभाव विश्लेषण</span>
-            </h4>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <!-- Personality -->
-              <div class="p-4 bg-amber-50/60 rounded-xl border border-amber-200">
-                <div class="font-bold text-sm text-orange-950 font-devanagari flex items-center gap-2 mb-2">
-                  <i class="fa-solid fa-brain text-orange-600"></i>
-                  <span data-i18n="pred_personality">व्यक्तित्व एवं स्वभाव</span>
-                </div>
-                <p id="pred-personality-text" class="text-xs text-gray-700 leading-relaxed font-devanagari">
-                  जातक में नैसर्गिक नेतृत्व क्षमता, दृढ़ संकल्प और स्वाभिमान होता है। अग्नि तत्व की प्रधानता से निर्णय लेने में निपुण और साहसी प्रवृत्ति रहती है।
-                </p>
-              </div>
-
-              <!-- Career & Wealth -->
-              <div class="p-4 bg-orange-50/60 rounded-xl border border-orange-200">
-                <div class="font-bold text-sm text-orange-950 font-devanagari flex items-center gap-2 mb-2">
-                  <i class="fa-solid fa-briefcase text-orange-600"></i>
-                  <span data-i18n="pred_career">विद्या, कर्म व व्यवसाय</span>
-                </div>
-                <p id="pred-career-text" class="text-xs text-gray-700 leading-relaxed font-devanagari">
-                  प्रशासनिक सेवाओं, प्रबंधन, शिक्षा, विधि एवं तकनीक के क्षेत्र में असाधारण सफलता प्राप्त होती है। 28वें वर्ष उपरांत भाग्योदय के प्रबल योग हैं।
-                </p>
-              </div>
-
-              <!-- Health & Ayurveda -->
-              <div class="p-4 bg-emerald-50/60 rounded-xl border border-emerald-200">
-                <div class="font-bold text-sm text-emerald-950 font-devanagari flex items-center gap-2 mb-2">
-                  <i class="fa-solid fa-heart-pulse text-emerald-600"></i>
-                  <span data-i18n="pred_health">आरोग्य एवं दोष संतुलन</span>
-                </div>
-                <p id="pred-health-text" class="text-xs text-gray-700 leading-relaxed font-devanagari">
-                  पित्त एवं वायु दोष का संतुलन बनाए रखें। नेत्र, उदर एवं रक्तचाप का समय-समय पर ध्यान रखें। नित्य सूर्य को अर्घ्य देना स्वास्थ्यवर्धक रहेगा।
-                </p>
-              </div>
-            </div>
-
-            <!-- Vedic Remedy Box -->
-            <div class="mt-4 p-4 bg-gradient-to-r from-amber-100 to-orange-100 rounded-xl border border-gold-300">
-              <div class="flex items-start space-x-3">
-                <span class="text-xl text-orange-700">🕉️</span>
-                <div>
-                  <h5 class="font-bold text-xs uppercase tracking-wide text-orange-900" data-i18n="remedial_upaya">
-                    शास्त्रीय उपाय एवं दैनिक साधना
-                  </h5>
-                  <p id="pred-remedies-text" class="text-xs text-gray-800 mt-1 font-devanagari leading-relaxed">
-                    नित्य 'ॐ घृणिः सूर्याय नमः' अथवा 'गायत्री मंत्र' का 108 बार जप करें। रविवार को तांबे के लोटे में जल, रोली व अक्षत डालकर सूर्य को अर्घ्य समर्पित करें।
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- MODULE 3: COMPREHENSIVE PANDIT & PUROHIT TOOLKIT -->
-    <!-- ========================================================================= -->
-    <section id="section-toolkit" class="tab-content hidden transition-all duration-300">
-      
-      <!-- Sub-Navigation for Toolkit: Ledger vs Samagri -->
-      <div class="flex flex-wrap items-center justify-between border-b-2 border-gold-300 pb-4 mb-6 gap-3">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-devanagari font-bold text-gray-900" data-i18n="toolkit_heading">
-            पुरोहित डिजिटल डायरी एवं सामग्री संकलन
-          </h2>
-          <p class="text-xs sm:text-sm text-gray-600 font-devanagari" data-i18n="toolkit_sub">
-            यजमान बहीखाता (Pujas Ledger), स्वचालित पूजा सामग्री चेकलिस्ट एवं त्वरित वॉट्सऐप प्रेषक
-          </p>
-        </div>
-
-        <div class="flex items-center space-x-2 bg-amber-100/70 p-1 rounded-xl border border-amber-300">
-          <button id="toolkit-tab-ledger" onclick="switchToolkitSubTab('ledger')" class="px-4 py-2 rounded-lg text-xs font-bold transition-all bg-orange-600 text-white shadow">
-            <i class="fa-solid fa-book-journal-whills mr-1.5"></i>
-            <span data-i18n="subtab_ledger">यजमान बहीखाता (Diary)</span>
-          </button>
-          <button id="toolkit-tab-samagri" onclick="switchToolkitSubTab('samagri')" class="px-4 py-2 rounded-lg text-xs font-bold text-gray-700 hover:text-orange-700 transition-all">
-            <i class="fa-solid fa-list-check mr-1.5"></i>
-            <span data-i18n="subtab_samagri">पूजा सामग्री चेकलिस्ट</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- ================= SUB-PANEL 1: PANDIT'S DIGITAL DIARY (YAJMAN LEDGER) ================= -->
-      <div id="subpanel-ledger" class="space-y-6">
-        
-        <!-- Ledger Summary Counters -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="bg-white p-4 rounded-2xl border-2 border-amber-200 shadow-sm flex items-center space-x-3">
-            <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl font-bold">
-              <i class="fa-solid fa-calendar-check"></i>
-            </div>
-            <div>
-              <div class="text-xs text-gray-500 font-semibold" data-i18n="stat_total_pujas">कुल दर्ज अनुष्ठान</div>
-              <div id="stat-total-pujas" class="text-xl font-bold text-gray-900 font-mono">0</div>
-            </div>
-          </div>
-
-          <div class="bg-white p-4 rounded-2xl border-2 border-emerald-200 shadow-sm flex items-center space-x-3">
-            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold">
-              <i class="fa-solid fa-clock"></i>
-            </div>
-            <div>
-              <div class="text-xs text-gray-500 font-semibold" data-i18n="stat_upcoming">आगामी पूजाएं</div>
-              <div id="stat-upcoming" class="text-xl font-bold text-emerald-700 font-mono">0</div>
-            </div>
-          </div>
-
-          <div class="bg-white p-4 rounded-2xl border-2 border-blue-200 shadow-sm flex items-center space-x-3">
-            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl font-bold">
-              <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <div>
-              <div class="text-xs text-gray-500 font-semibold" data-i18n="stat_completed">सम्पन्न पूजाएं</div>
-              <div id="stat-completed" class="text-xl font-bold text-blue-700 font-mono">0</div>
-            </div>
-          </div>
-
-          <div class="bg-white p-4 rounded-2xl border-2 border-gold-300 shadow-sm flex items-center space-x-3">
-            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold">
-              <i class="fa-solid fa-indian-rupee-sign"></i>
-            </div>
-            <div>
-              <div class="text-xs text-gray-500 font-semibold" data-i18n="stat_dakshina">अनुमानित दक्षिणा शेष</div>
-              <div id="stat-dakshina-balance" class="text-xl font-bold text-amber-800 font-mono">₹ 0</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls Bar: Search, Filters, Add New Puja & Export -->
-        <div class="bg-white rounded-2xl p-4 border border-amber-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-3">
-          
-          <!-- Search Input -->
-          <div class="relative w-full md:w-72">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-orange-600">
-              <i class="fa-solid fa-magnifying-glass text-xs"></i>
-            </span>
-            <input type="text" id="ledger-search-input" placeholder="यजमान नाम, गोत्र या पूजा खोजें..."
-              class="w-full pl-9 pr-3 py-2 bg-amber-50/50 border border-amber-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-          </div>
-
-          <!-- Status Filter -->
-          <div class="flex items-center space-x-2 w-full md:w-auto">
-            <select id="ledger-status-filter" class="bg-amber-50/60 border border-amber-300 text-xs font-semibold rounded-xl px-3 py-2 focus:outline-none text-gray-800 cursor-pointer">
-              <option value="all">सभी अनुष्ठान (All)</option>
-              <option value="scheduled">आगामी (Scheduled)</option>
-              <option value="completed">सम्पन्न (Completed)</option>
-              <option value="pending_payment">दक्षिणा शेष (Pending Balance)</option>
-            </select>
-
-            <!-- Export / Backup Dropdown or Buttons -->
-            <button onclick="exportLedgerCSV()" title="CSV डाउनलोड" class="bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold px-3 py-2 rounded-xl border border-amber-300 transition flex items-center gap-1">
-              <i class="fa-solid fa-file-csv"></i>
-              <span class="hidden sm:inline">CSV</span>
-            </button>
-
-            <!-- Add New Puja Button -->
-            <button onclick="openAddPujaModal()" class="bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow flex items-center gap-1.5 whitespace-nowrap">
-              <i class="fa-solid fa-plus"></i>
-              <span data-i18n="add_new_puja_btn">नवीन पूजा जोड़ें</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Ledger Entries Table / Grid -->
-        <div class="bg-white rounded-2xl border-2 border-gold-300 shadow-sacred overflow-hidden">
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
-              <thead>
-                <tr class="bg-gradient-to-r from-amber-100 to-orange-100 text-orange-950 font-bold text-xs uppercase border-b border-amber-200">
-                  <th class="py-3 px-4" data-i18n="col_date_time">दिनांक व समय</th>
-                  <th class="py-3 px-4" data-i18n="col_yajman">यजमान व गोत्र</th>
-                  <th class="py-3 px-4" data-i18n="col_puja">अनुष्ठान / पूजा प्रकार</th>
-                  <th class="py-3 px-4" data-i18n="col_venue">स्थान / पता</th>
-                  <th class="py-3 px-4" data-i18n="col_dakshina">दक्षिणा (कुल / शेष)</th>
-                  <th class="py-3 px-4" data-i18n="col_status">स्थिति</th>
-                  <th class="py-3 px-4 text-center" data-i18n="col_actions">क्रियाएं (Actions)</th>
-                </tr>
-              </thead>
-              <tbody id="ledger-table-body" class="divide-y divide-amber-100 text-xs font-devanagari">
-                <!-- Injected via JavaScript -->
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Empty State -->
-          <div id="ledger-empty-state" class="hidden py-12 text-center text-gray-500 font-devanagari">
-            <i class="fa-solid fa-scroll text-4xl text-amber-300 mb-2"></i>
-            <p class="font-bold text-sm text-gray-700">वर्तमान में कोई अनुष्ठान दर्ज नहीं है</p>
-            <p class="text-xs text-gray-500 mt-1">नवीन पूजा जोड़ने हेतु ऊपर दिए गए बटन पर क्लिक करें।</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- ================= SUB-PANEL 2: SAMAGRI CHECKLIST GENERATOR ================= -->
-      <div id="subpanel-samagri" class="hidden space-y-6">
-        
-        <!-- Puja Type Selector Bar -->
-        <div class="bg-white rounded-2xl p-5 border-2 border-gold-300 shadow-sacred flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div class="w-full md:w-1/2">
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="select_puja_samagri">
-              पूजन अनुष्ठान का चयन करें *
-            </label>
-            <div class="relative">
-              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-orange-600">
-                <i class="fa-solid fa-fire"></i>
-              </span>
-              <select id="samagri-puja-select" onchange="loadSamagriList()" class="w-full pl-9 pr-3 py-2.5 bg-amber-50/70 border-2 border-amber-300 rounded-xl text-sm font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 cursor-pointer">
-                <option value="satyanarayan">श्री सत्यनारायण व्रत कथा एवं पूजन</option>
-                <option value="rudrabhishek">रुद्राभिषेक एवं महारुद्र पूजन (भगवान शिव)</option>
-                <option value="griha_pravesh">गृह प्रवेश एवं वास्तु शांति अनुष्ठान</option>
-                <option value="navagraha">नवग्रह शांति एवं होम-हवन</option>
-                <option value="lakshmi_kuber">श्री महालक्ष्मी एवं कुबेर पूजन (दीपावली/धनतेरस)</option>
-                <option value="vivah">विवाह संस्कार एवं पाणिग्रहण विधि</option>
-                <option value="mundan">मुंडन एवं नामकरण संस्कार</option>
-                <option value="ganesh_sthapana">श्री गणेश स्थापना एवं संकटनाशन पूजन</option>
-                <option value="kaal_sarp">कालसर्प दोष निवारण शांति</option>
-                <option value="shradh_tarpan">पितृ श्राद्ध एवं तर्पण विधि</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Progress Meter & Actions -->
-          <div class="w-full md:w-1/2 flex flex-col justify-end">
-            <div class="flex justify-between items-center text-xs font-bold text-gray-700 mb-1.5">
-              <span data-i18n="checklist_progress">सामग्री संकलन प्रगति:</span>
-              <span id="samagri-progress-count" class="text-orange-700 font-mono">0 / 0 (0%)</span>
-            </div>
-            <!-- Progress Bar -->
-            <div class="w-full bg-amber-100 rounded-full h-3 border border-amber-300 overflow-hidden mb-3">
-              <div id="samagri-progress-bar" class="bg-gradient-to-r from-amber-500 to-orange-600 h-full w-0 transition-all duration-300"></div>
-            </div>
-
-            <!-- Quick Action Buttons -->
-            <div class="flex flex-wrap items-center gap-2">
-              <button onclick="copySamagriForWhatsApp()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition shadow flex items-center gap-1.5">
-                <i class="fa-brands fa-whatsapp text-sm"></i>
-                <span data-i18n="whatsapp_list">यजमान को सूची भेजें</span>
-              </button>
-              <button onclick="printSamagriSheet()" class="bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold px-3 py-1.5 rounded-lg border border-amber-300 transition flex items-center gap-1.5">
-                <i class="fa-solid fa-print"></i>
-                <span data-i18n="print_slip">प्रिंट पर्ची</span>
-              </button>
-              <button onclick="toggleAllSamagri(true)" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold px-2.5 py-1.5 rounded-lg border border-gray-300 transition" title="सभी टिक करें">
-                <i class="fa-solid fa-check-double"></i>
-              </button>
-              <button onclick="resetSamagriChecks()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold px-2.5 py-1.5 rounded-lg border border-gray-300 transition" title="रीसेट करें">
-                <i class="fa-solid fa-arrow-rotate-left"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add Custom Samagri Item Bar -->
-        <div class="bg-amber-50/60 rounded-xl p-3 border border-amber-200 flex flex-col sm:flex-row items-center gap-2">
-          <input type="text" id="custom-samagri-name" placeholder="अतिरिक्त सामग्री नाम (उदा. पीले पुष्प, 51 पान के पत्ते)..."
-            class="w-full sm:flex-grow px-3 py-1.5 bg-white border border-amber-300 rounded-lg text-xs font-medium focus:outline-none focus:ring-1 focus:ring-orange-500">
-          <input type="text" id="custom-samagri-qty" placeholder="मात्रा (उदा. 1 किलो)"
-            class="w-full sm:w-36 px-3 py-1.5 bg-white border border-amber-300 rounded-lg text-xs font-medium focus:outline-none focus:ring-1 focus:ring-orange-500">
-          <button onclick="addCustomSamagriItem()" class="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold px-4 py-1.5 rounded-lg transition whitespace-nowrap">
-            <i class="fa-solid fa-plus mr-1"></i>
-            <span data-i18n="add_item_btn">सामग्री जोड़ें</span>
-          </button>
-        </div>
-
-        <!-- Categorized Samagri Checklist Grid -->
-        <div id="samagri-categories-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Populated via JavaScript -->
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- MODULE 4: EXTENSIVE LIVE MIGRATED DARSHAN AGGREGATOR -->
-    <!-- ========================================================================= -->
-    <section id="section-darshan" class="tab-content hidden transition-all duration-300">
-      
-      <!-- Live Darshan Header -->
-      <div class="bg-gradient-to-r from-red-950 via-orange-950 to-amber-950 text-white rounded-2xl p-6 shadow-sacred mb-8 border border-gold-400/40">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <div class="flex items-center space-x-2">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-red-600 text-white tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-white mr-1.5 live-dot"></span>
-                OFFICIAL LIVE STREAMS
-              </span>
-              <span class="text-xs text-amber-300 font-bold" data-i18n="sanctum_feed">पावन गर्भगृह सीधा प्रसारण</span>
-            </div>
-            <h2 class="text-3xl font-devanagari font-bold text-amber-100 mt-2" data-i18n="darshan_heading">
-              प्रमुख तीर्थ एवं द्वादश ज्योतिर्लिंग दिव्य दर्शन
-            </h2>
-            <p class="text-sm text-amber-200/90 font-devanagari mt-1" data-i18n="darshan_sub">
-              काशी विश्वनाथ, महाकालेश्वर भस्म आरती, सोमनाथ, अयोध्या एवं इस्कॉन धाम के प्रत्यक्ष लाइव दर्शन
-            </p>
-          </div>
-
-          <!-- Temple Bell Interaction in Darshan -->
-          <button onclick="playTempleBellSound()" class="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-black font-extrabold text-sm px-5 py-3 rounded-2xl transition shadow-lg flex items-center justify-center space-x-2 active:scale-95">
-            <i class="fa-solid fa-bell text-lg"></i>
-            <span data-i18n="darshan_ring_bell">मंदिर की घंटी बजाएं (Ring Bell)</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Live Stream Grid (Responsive 2x2 or 3 columns) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8" id="darshan-grid-container">
-        
-        <!-- Temple 1: Shri Kashi Vishwanath Dham -->
-        <div class="bg-white rounded-2xl border-2 border-gold-300 shadow-sacred overflow-hidden flex flex-col justify-between hover:border-orange-500 transition-all">
-          <div>
-            <!-- Video Container 16:9 -->
-            <div class="relative aspect-video bg-black overflow-hidden group">
-              <iframe 
-                id="iframe-kashi"
-                class="w-full h-full border-0"
-                src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCvW_Gj_y020W8f4X9y-0cDA"
-                title="Shri Kashi Vishwanath Live Darshan"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-              <!-- Fallback / Direct Launch Overlay -->
-              <div class="absolute top-2 left-2 flex items-center space-x-1.5 bg-black/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-bold">
-                <span class="w-2 h-2 rounded-full bg-red-500 live-dot"></span>
-                <span>LIVE DARSHAN</span>
-              </div>
-              <button onclick="openExternalStream('kashi')" class="absolute bottom-2 right-2 bg-orange-600/90 hover:bg-orange-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-md transition shadow">
-                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
-                <span data-i18n="direct_feed">आधिकारिक चैनल</span>
-              </button>
-            </div>
-
-            <!-- Temple Content -->
-            <div class="p-5">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h3 class="font-devanagari font-bold text-xl text-gray-900">
-                    श्री काशी विश्वनाथ ज्योतिर्लिंग (वाराणसी)
-                  </h3>
-                  <p class="text-xs text-orange-700 font-semibold font-devanagari mt-0.5">
-                    मोक्षदायिनी अविमुक्त क्षेत्र • गंगा तट, उत्तर प्रदेश
-                  </p>
-                </div>
-                <button onclick="toggleAartiSchedule('kashi')" class="text-xs font-bold text-amber-800 bg-amber-100 hover:bg-amber-200 px-2.5 py-1.5 rounded-lg border border-amber-300 transition">
-                  <i class="fa-solid fa-clock-rotate-left mr-1"></i>
-                  <span>आरती समय</span>
-                </button>
-              </div>
-
-              <p class="text-xs text-gray-600 font-devanagari mt-3 leading-relaxed">
-                द्वादश ज्योतिर्लिंगों में प्रमुख बाबा विश्वनाथ धाम। मान्यता है कि काशी भगवान शिव के त्रिशूल पर स्थित है और यहाँ दर्शन मात्र से समस्त पापों का शमन होता है।
-              </p>
-            </div>
-          </div>
-
-          <!-- Temple Card Footer -->
-          <div class="bg-amber-50/70 p-4 border-t border-amber-200 flex items-center justify-between text-xs">
-            <span class="text-gray-600 font-semibold">
-              <i class="fa-solid fa-om text-orange-600 mr-1"></i>
-              मंगला आरती: प्रात: 03:00 AM
-            </span>
-            <a href="https://www.shrikashivishwanath.org" target="_blank" class="font-bold text-orange-700 hover:text-orange-900 underline flex items-center gap-1">
-              <span>ई-पूजा व प्रसाद</span>
-              <i class="fa-solid fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Temple 2: Shri Mahakaleshwar Jyotirlinga (Ujjain) -->
-        <div class="bg-white rounded-2xl border-2 border-gold-300 shadow-sacred overflow-hidden flex flex-col justify-between hover:border-orange-500 transition-all">
-          <div>
-            <!-- Video Container 16:9 -->
-            <div class="relative aspect-video bg-black overflow-hidden group">
-              <iframe 
-                id="iframe-mahakal"
-                class="w-full h-full border-0"
-                src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCv9zH-a-m0sXF8979G_nO9A"
-                title="Shri Mahakaleshwar Live Bhasma Aarti"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-              <div class="absolute top-2 left-2 flex items-center space-x-1.5 bg-black/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-bold">
-                <span class="w-2 h-2 rounded-full bg-red-500 live-dot"></span>
-                <span>BHASMA AARTI</span>
-              </div>
-              <button onclick="openExternalStream('mahakal')" class="absolute bottom-2 right-2 bg-orange-600/90 hover:bg-orange-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-md transition shadow">
-                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
-                <span data-i18n="direct_feed">आधिकारिक चैनल</span>
-              </button>
-            </div>
-
-            <!-- Temple Content -->
-            <div class="p-5">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h3 class="font-devanagari font-bold text-xl text-gray-900">
-                    श्री महाकालेश्वर ज्योतिर्लिंग (उज्जैन)
-                  </h3>
-                  <p class="text-xs text-orange-700 font-semibold font-devanagari mt-0.5">
-                    एकमात्र दक्षिणमुखी ज्योतिर्लिंग • क्षिप्रा तट, मध्य प्रदेश
-                  </p>
-                </div>
-                <button onclick="toggleAartiSchedule('mahakal')" class="text-xs font-bold text-amber-800 bg-amber-100 hover:bg-amber-200 px-2.5 py-1.5 rounded-lg border border-amber-300 transition">
-                  <i class="fa-solid fa-clock-rotate-left mr-1"></i>
-                  <span>आरती समय</span>
-                </button>
-              </div>
-
-              <p class="text-xs text-gray-600 font-devanagari mt-3 leading-relaxed">
-                काल के भी काल राजाधिराज महाकाल की विश्व-प्रसिद्ध भस्म आरती प्रतिदिन ब्रह्म मुहूर्त में आयोजित होती है। यहाँ कालदोष एवं अकाल मृत्यु का भय समाप्त होता है।
-              </p>
-            </div>
-          </div>
-
-          <!-- Temple Card Footer -->
-          <div class="bg-amber-50/70 p-4 border-t border-amber-200 flex items-center justify-between text-xs">
-            <span class="text-gray-600 font-semibold">
-              <i class="fa-solid fa-fire-flame-curved text-orange-600 mr-1"></i>
-              भस्म आरती: प्रात: 04:00 AM
-            </span>
-            <a href="https://shrimahakaleshwar.com" target="_blank" class="font-bold text-orange-700 hover:text-orange-900 underline flex items-center gap-1">
-              <span>भस्म आरती बुकिंग</span>
-              <i class="fa-solid fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Temple 3: Shri Somnath Jyotirlinga (Gujarat) -->
-        <div class="bg-white rounded-2xl border-2 border-gold-300 shadow-sacred overflow-hidden flex flex-col justify-between hover:border-orange-500 transition-all">
-          <div>
-            <!-- Video Container 16:9 -->
-            <div class="relative aspect-video bg-black overflow-hidden group">
-              <iframe 
-                id="iframe-somnath"
-                class="w-full h-full border-0"
-                src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCvK1U0jL7B4z9k6q90A7g_g"
-                title="Shri Somnath Jyotirlinga Live Darshan"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-              <div class="absolute top-2 left-2 flex items-center space-x-1.5 bg-black/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-bold">
-                <span class="w-2 h-2 rounded-full bg-red-500 live-dot"></span>
-                <span>FIRST JYOTIRLINGA</span>
-              </div>
-              <button onclick="openExternalStream('somnath')" class="absolute bottom-2 right-2 bg-orange-600/90 hover:bg-orange-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-md transition shadow">
-                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
-                <span data-i18n="direct_feed">आधिकारिक चैनल</span>
-              </button>
-            </div>
-
-            <!-- Temple Content -->
-            <div class="p-5">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h3 class="font-devanagari font-bold text-xl text-gray-900">
-                    श्री सोमनाथ ज्योतिर्लिंग (प्रभास पाटन)
-                  </h3>
-                  <p class="text-xs text-orange-700 font-semibold font-devanagari mt-0.5">
-                    प्रथम ज्योतिर्लिंग • अरब सागर तट, सौराष्ट्र, गुजरात
-                  </p>
-                </div>
-                <button onclick="toggleAartiSchedule('somnath')" class="text-xs font-bold text-amber-800 bg-amber-100 hover:bg-amber-200 px-2.5 py-1.5 rounded-lg border border-amber-300 transition">
-                  <i class="fa-solid fa-clock-rotate-left mr-1"></i>
-                  <span>आरती समय</span>
-                </button>
-              </div>
-
-              <p class="text-xs text-gray-600 font-devanagari mt-3 leading-relaxed">
-                'सौराष्ट्रे सोमनाथं च' - सनातन धर्म का प्रथम ज्योतिर्लिंग, जहाँ चंद्रदेव ने भगवान शिव की तपस्या कर क्षय रोग से मुक्ति प्राप्त की थी।
-              </p>
-            </div>
-          </div>
-
-          <!-- Temple Card Footer -->
-          <div class="bg-amber-50/70 p-4 border-t border-amber-200 flex items-center justify-between text-xs">
-            <span class="text-gray-600 font-semibold">
-              <i class="fa-solid fa-water text-blue-600 mr-1"></i>
-              शृंगार आरती: प्रातः 07:00 AM
-            </span>
-            <a href="https://somnath.org" target="_blank" class="font-bold text-orange-700 hover:text-orange-900 underline flex items-center gap-1">
-              <span>ट्रस्ट अधिकृत सेवा</span>
-              <i class="fa-solid fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Temple 4: ISKCON Mayapur / Vrindavan Sri Sri Krishna Balaram Aarti -->
-        <div class="bg-white rounded-2xl border-2 border-gold-300 shadow-sacred overflow-hidden flex flex-col justify-between hover:border-orange-500 transition-all">
-          <div>
-            <!-- Video Container 16:9 -->
-            <div class="relative aspect-video bg-black overflow-hidden group">
-              <iframe 
-                id="iframe-iskcon"
-                class="w-full h-full border-0"
-                src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCrF-Z1YgP1W-21Z1X0_iskcon"
-                title="ISKCON Mayapur / Vrindavan 24/7 Kirtan & Aarti"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-              <div class="absolute top-2 left-2 flex items-center space-x-1.5 bg-black/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-bold">
-                <span class="w-2 h-2 rounded-full bg-red-500 live-dot"></span>
-                <span>MAHAMANTRA KIRTAN</span>
-              </div>
-              <button onclick="openExternalStream('iskcon')" class="absolute bottom-2 right-2 bg-orange-600/90 hover:bg-orange-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-md transition shadow">
-                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
-                <span data-i18n="direct_feed">आधिकारिक चैनल</span>
-              </button>
-            </div>
-
-            <!-- Temple Content -->
-            <div class="p-5">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h3 class="font-devanagari font-bold text-xl text-gray-900">
-                    इस्कॉन मायापुर / श्री वृन्दावन धाम
-                  </h3>
-                  <p class="text-xs text-orange-700 font-semibold font-devanagari mt-0.5">
-                    श्री श्री राधा माधव एवं कृष्ण-बलराम मंदिर • 24x7 संकीर्तन
-                  </p>
-                </div>
-                <button onclick="toggleAartiSchedule('iskcon')" class="text-xs font-bold text-amber-800 bg-amber-100 hover:bg-amber-200 px-2.5 py-1.5 rounded-lg border border-amber-300 transition">
-                  <i class="fa-solid fa-clock-rotate-left mr-1"></i>
-                  <span>आरती समय</span>
-                </button>
-              </div>
-
-              <p class="text-xs text-gray-600 font-devanagari mt-3 leading-relaxed">
-                वैष्णव जगत का भव्य आध्यात्मिक केंद्र। निरंतर महामंत्र गान 'हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे', नित्य मंगल आरती एवं तुलसी वंदना।
-              </p>
-            </div>
-          </div>
-
-          <!-- Temple Card Footer -->
-          <div class="bg-amber-50/70 p-4 border-t border-amber-200 flex items-center justify-between text-xs">
-            <span class="text-gray-600 font-semibold">
-              <i class="fa-solid fa-sun text-yellow-600 mr-1"></i>
-              संध्या आरती: सायं 07:00 PM
-            </span>
-            <a href="https://mayapur.com" target="_blank" class="font-bold text-orange-700 hover:text-orange-900 underline flex items-center gap-1">
-              <span>मायापुर दर्शन पोर्टल</span>
-              <i class="fa-solid fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- MODULE 5: VEDIC CHANTS, AUDIO PLAYER & JAPA 108 COUNTER -->
-    <!-- ========================================================================= -->
-    <section id="section-chants" class="tab-content hidden transition-all duration-300">
-      
-      <!-- Chants Header -->
-      <div class="bg-gradient-to-r from-purple-950 via-amber-950 to-orange-950 text-white rounded-2xl p-6 shadow-sacred mb-8 border border-gold-400/40">
-        <div class="max-w-3xl">
-          <span class="bg-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-amber-400/30">
-            Sacred Vedic Harmonics & Japa Meditation
-          </span>
-          <h2 class="text-3xl font-devanagari font-bold text-white mt-2" data-i18n="chants_heading">
-            वैदिक नाद ब्रह्म, तानपूरा एवं १०८ जप माला
-          </h2>
-          <p class="text-sm text-amber-200/90 font-devanagari mt-1" data-i18n="chants_sub">
-            वेब ऑडियो एपीआई आधारित शुद्ध भारतीय तानपूरा नाद (Sa-Pa), ॐ 136.1Hz ध्यान एवं वैदिक सूक्त पाठ
-          </p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Left: Audio Player Engine & Visualizer (7 cols) -->
-        <div class="lg:col-span-7 space-y-6">
-          
-          <!-- Master Player Card -->
-          <div class="bg-white rounded-2xl p-6 border-2 border-gold-400 shadow-sacred">
-            
-            <div class="flex items-center justify-between pb-3 border-b border-amber-200 mb-4">
-              <div>
-                <span id="player-category-tag" class="text-[10px] font-bold uppercase tracking-wider text-orange-700 bg-orange-100 px-2 py-0.5 rounded">
-                  वैदिक महामंत्र
-                </span>
-                <h3 id="player-title" class="font-devanagari font-bold text-2xl text-gray-900 mt-1">
-                  श्री गायत्री महामंत्र (Gayatri Mantra)
-                </h3>
-              </div>
-              <!-- Tanpura Mode Toggle -->
-              <button id="tanpura-synth-btn" onclick="toggleTanpuraSynthesizer()" class="bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold px-3 py-1.5 rounded-xl border border-amber-300 transition flex items-center gap-1.5">
-                <i class="fa-solid fa-guitar text-orange-600"></i>
-                <span id="tanpura-btn-text">तानपूरा नाद (OFF)</span>
-              </button>
-            </div>
-
-            <!-- Audio Waveform Visualizer Canvas -->
-            <div class="relative w-full h-24 bg-gradient-to-r from-amber-950 via-gray-900 to-amber-950 rounded-xl overflow-hidden shadow-inner flex items-center justify-center mb-5">
-              <canvas id="audio-visualizer-canvas" class="w-full h-full"></canvas>
-              <div id="visualizer-idle-text" class="absolute text-amber-300/60 font-devanagari text-xs select-none">
-                ॐ नाद ब्रह्म • ऑडियो प्रारंभ करने हेतु प्ले बटन दबाएं
-              </div>
-            </div>
-
-            <!-- Main Control Bar -->
-            <div class="flex items-center justify-between gap-4 mb-5">
-              <!-- Previous Button -->
-              <button onclick="prevMantra()" class="w-10 h-10 rounded-full bg-amber-100 hover:bg-amber-200 text-orange-800 flex items-center justify-center transition active:scale-95 shadow-sm">
-                <i class="fa-solid fa-backward-step"></i>
-              </button>
-
-              <!-- Play / Pause Master Button -->
-              <button id="master-play-btn" onclick="togglePlayAudio()" class="w-16 h-16 rounded-full bg-gradient-to-tr from-orange-600 via-amber-500 to-yellow-500 hover:from-orange-700 hover:to-amber-600 text-white flex items-center justify-center text-2xl shadow-saffron-glow transition transform hover:scale-105 active:scale-95">
-                <i id="master-play-icon" class="fa-solid fa-play ml-1"></i>
-              </button>
-
-              <!-- Next Button -->
-              <button onclick="nextMantra()" class="w-10 h-10 rounded-full bg-amber-100 hover:bg-amber-200 text-orange-800 flex items-center justify-center transition active:scale-95 shadow-sm">
-                <i class="fa-solid fa-forward-step"></i>
-              </button>
-
-              <!-- Volume Control -->
-              <div class="flex items-center space-x-2 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200">
-                <i class="fa-solid fa-volume-high text-orange-600 text-xs"></i>
-                <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.8"
-                  class="w-20 accent-orange-600 cursor-pointer">
-              </div>
-
-              <!-- Loop Toggle -->
-              <button id="loop-toggle-btn" onclick="toggleLoopAudio()" class="px-2.5 py-1.5 rounded-xl border border-amber-300 text-xs font-bold text-orange-700 bg-amber-50 hover:bg-orange-100 transition">
-                <i class="fa-solid fa-repeat mr-1"></i>
-                <span id="loop-btn-text">लूप (चालू)</span>
-              </button>
-            </div>
-
-            <!-- Mantra Lyrics Display Container -->
-            <div class="p-5 bg-gradient-to-b from-amber-50/60 to-orange-50/40 rounded-xl border border-gold-300">
-              <div class="text-center">
-                <div class="text-orange-600 text-xs font-bold uppercase tracking-widest mb-1">संस्कृत श्लोक / मंत्र</div>
-                <div id="mantra-sanskrit" class="text-xl sm:text-2xl font-devanagari font-bold text-orange-950 leading-relaxed py-2">
-                  ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्॥
-                </div>
-                <div id="mantra-transliteration" class="text-xs font-medium text-amber-900/80 italic mt-1">
-                  Om Bhur Bhuvah Svah, Tat Savitur Varenyam, Bhargo Devasya Dheemahi, Dhiyo Yo Nah Prachodayaat.
-                </div>
-              </div>
-
-              <!-- Meaning -->
-              <div class="mt-4 pt-3 border-t border-amber-200 text-xs text-gray-700">
-                <span class="font-bold text-orange-900" data-i18n="spiritual_meaning">आध्यात्मिक भावार्थ:</span>
-                <span id="mantra-meaning" class="font-devanagari ml-1">
-                  हम उस प्राणस्वरूप, दुःखनाशक, सुखस्वरूप, श्रेष्ठ, तेजस्वी, पापनाशक, देवस्वरूप परमात्मा का ध्यान करते हैं, जो हमारी बुद्धि को सन्मार्ग की ओर प्रेरित करे।
-                </span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Playlist of Embedded Mantras -->
-          <div class="bg-white rounded-2xl p-5 border-2 border-amber-200 shadow-sm">
-            <h4 class="font-devanagari font-bold text-base text-gray-900 mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-list-ul text-orange-600"></i>
-              <span data-i18n="available_mantras">उपलब्ध वैदिक मंत्र एवं स्तोत्र</span>
-            </h4>
-            <div id="mantras-playlist-container" class="space-y-2">
-              <!-- Injected dynamically via JS -->
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: 108 Japa Mala Interactive Counter (5 cols) -->
-        <div class="lg:col-span-5 space-y-6">
-          
-          <div class="bg-gradient-to-br from-amber-50 via-white to-orange-50 rounded-2xl p-6 border-2 border-gold-400 shadow-sacred text-center relative overflow-hidden">
-            
-            <div class="flex items-center justify-between pb-3 border-b border-amber-200 mb-4">
-              <div class="flex items-center space-x-2">
-                <span class="text-xl text-orange-600">📿</span>
-                <h3 class="font-devanagari font-bold text-lg text-gray-900" data-i18n="japa_counter_title">
-                  १०८ जप माला गणक
-                </h3>
-              </div>
-              <span class="text-xs font-bold text-orange-800 bg-orange-100 px-2.5 py-0.5 rounded-full border border-orange-300">
-                तुलसी / रुद्राक्ष माला
-              </span>
-            </div>
-
-            <!-- Big Circular Japa Bead Counter Display -->
-            <div class="relative w-48 h-48 mx-auto my-4 flex items-center justify-center">
-              <!-- SVG Ring Progress -->
-              <svg class="w-full h-full transform -rotate-90">
-                <circle cx="96" cy="96" r="80" stroke="#fef3c7" stroke-width="12" fill="transparent" />
-                <circle id="japa-progress-ring" cx="96" cy="96" r="80" stroke="#ea580c" stroke-width="12" stroke-dasharray="502.65" stroke-dashoffset="502.65" stroke-linecap="round" fill="transparent" class="transition-all duration-200" />
-              </svg>
-
-              <!-- Central Count -->
-              <div class="absolute flex flex-col items-center justify-center">
-                <span id="japa-count-display" class="font-mono text-5xl font-black text-orange-950">0</span>
-                <span class="text-xs font-bold uppercase tracking-wider text-orange-700 mt-1">/ 108 मणके</span>
-              </div>
-            </div>
-
-            <!-- Completed Malas Badge -->
-            <div class="mb-5 inline-flex items-center space-x-2 bg-amber-100 px-4 py-1.5 rounded-full border border-gold-300">
-              <i class="fa-solid fa-award text-amber-600"></i>
-              <span class="text-xs font-bold text-amber-950">
-                पूर्ण माला: <span id="japa-malas-completed" class="font-mono text-sm text-orange-700">0</span>
-              </span>
-            </div>
-
-            <!-- Big Bead Tap Action Button -->
-            <button id="japa-tap-btn" onclick="incrementJapaCount()" class="w-full bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600 hover:from-orange-700 hover:to-amber-700 text-white font-devanagari font-bold text-lg py-4 rounded-2xl shadow-lg transition transform active:scale-95 flex items-center justify-center space-x-2 select-none">
-              <span>📿</span>
-              <span data-i18n="tap_japa_bead">मनका घुमाएं / जप करें (Tap Bead)</span>
-            </button>
-
-            <!-- Reset & Sound Feedback -->
-            <div class="flex items-center justify-between mt-4 pt-3 border-t border-amber-200 text-xs">
-              <label class="flex items-center space-x-1.5 cursor-pointer text-gray-700 font-medium">
-                <input type="checkbox" id="japa-sound-toggle" checked class="accent-orange-600">
-                <span data-i18n="bead_sound">मनका ध्वनि</span>
-              </label>
-              <button onclick="resetJapaCount()" class="text-red-700 hover:text-red-900 font-bold flex items-center gap-1">
-                <i class="fa-solid fa-rotate-left text-xs"></i>
-                <span data-i18n="reset_japa">माला रीसेट करें</span>
-              </button>
-            </div>
-
-          </div>
-
-          <!-- Japa Meditation Guidance -->
-          <div class="bg-white rounded-2xl p-5 border-2 border-amber-200 shadow-sm text-xs text-gray-700 font-devanagari space-y-2">
-            <h4 class="font-bold text-sm text-orange-950 flex items-center gap-1.5">
-              <i class="fa-solid fa-lightbulb text-amber-600"></i>
-              <span data-i18n="japa_rules_heading">माला जप के शास्त्रीय नियम</span>
-            </h4>
-            <p>• मध्यमा उंगली पर माला रखकर अंगूठे से मनका अपनी ओर खींचें। तर्जनी (Index Finger) का स्पर्श न होने दें।</p>
-            <p>• सुमेरु (शीर्ष मनके) को कभी लांघना नहीं चाहिए। १०८ पूर्ण होने पर वहीं से पलटकर पुनः जप करें।</p>
-            <p>• मन में एकाग्रता के साथ इष्ट मंत्र के अर्थ का स्मरण करने से अनंत फल की प्राप्ति होती है।</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
+  <!-- ================= MAIN DYNAMIC VIEW CONTAINER ================= -->
+  <main id="app-viewport" class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <!-- Populated dynamically via app.js routing -->
+    <div class="py-20 text-center">
+      <i class="fa-solid fa-om text-5xl text-saffron-600 animate-spin"></i>
+      <p class="font-devanagari font-bold text-lg text-gray-800 mt-4">वैदिक सेवा केंद्र लोड हो रहा है...</p>
+    </div>
   </main>
 
-  <!-- ================= MODALS ================= -->
-
-  <!-- Modal 1: Add New Puja in Ledger -->
-  <div id="add-puja-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-lg w-full border-2 border-gold-400 shadow-2xl overflow-hidden animate-fade-in">
-      <div class="bg-gradient-to-r from-orange-800 to-amber-800 text-white p-4 flex justify-between items-center">
-        <h3 class="font-devanagari font-bold text-lg flex items-center gap-2">
-          <span>ॐ</span>
-          <span data-i18n="modal_new_puja_title">नवीन यजमान एवं पूजा अनुष्ठान पंजीयन</span>
-        </h3>
-        <button onclick="closeAddPujaModal()" class="text-amber-200 hover:text-white text-lg font-bold">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <form id="add-puja-form" class="p-6 space-y-4 max-h-[80vh] overflow-y-auto">
-        <!-- Client Name -->
-        <div>
-          <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="client_name">
-            यजमान का नाम *
-          </label>
-          <input type="text" id="m-client-name" required placeholder="उदा. पंडित रामनारायण शास्त्री"
-            class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-        </div>
-
-        <!-- Gotra & Phone -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="gotra">
-              गोत्र (Gotra)
-            </label>
-            <input type="text" id="m-gotra" placeholder="उदा. भारद्वाज / कश्यप"
-              class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="phone_whatsapp">
-              दूरभाष / WhatsApp *
-            </label>
-            <input type="tel" id="m-phone" required placeholder="उदा. 9876543210"
-              class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-          </div>
-        </div>
-
-        <!-- Date & Time -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="puja_date">
-              दिनांक *
-            </label>
-            <input type="date" id="m-date" required
-              class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="puja_time">
-              शुभ समय *
-            </label>
-            <input type="time" id="m-time" required value="09:00"
-              class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-          </div>
-        </div>
-
-        <!-- Puja Type -->
-        <div>
-          <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="puja_type">
-            पूजा / अनुष्ठान प्रकार *
-          </label>
-          <select id="m-puja-type" class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-            <option value="श्री सत्यनारायण व्रत कथा">श्री सत्यनारायण व्रत कथा</option>
-            <option value="रुद्राभिषेक एवं शिव पूजन">रुद्राभिषेक एवं शिव पूजन</option>
-            <option value="गृह प्रवेश एवं वास्तु शांति">गृह प्रवेश एवं वास्तु शांति</option>
-            <option value="नवग्रह शांति एवं हवन">नवग्रह शांति एवं हवन</option>
-            <option value="विवाह संस्कार विधि">विवाह संस्कार विधि</option>
-            <option value="मुंडन एवं नामकरण संस्कार">मुंडन एवं नामकरण संस्कार</option>
-            <option value="महालक्ष्मी एवं कुबेर पूजन">महालक्ष्मी एवं कुबेर पूजन</option>
-            <option value="कालसर्प शांति निवारण">कालसर्प शांति निवारण</option>
-            <option value="श्राद्ध एवं तर्पण विधि">श्राद्ध एवं तर्पण विधि</option>
-            <option value="अन्य विशेष अनुष्ठान">अन्य विशेष अनुष्ठान</option>
-          </select>
-        </div>
-
-        <!-- Venue / Address -->
-        <div>
-          <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="venue_address">
-            पूजन स्थल / पता *
-          </label>
-          <input type="text" id="m-venue" required placeholder="उदा. मकान नं. 45, संकट मोचन कॉलोनी, वाराणसी"
-            class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-        </div>
-
-        <!-- Dakshina Finances -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="dakshina_agreed">
-              कुल दक्षिणा (₹)
-            </label>
-            <input type="number" id="m-dakshina" value="2100" min="0"
-              class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="advance_received">
-              अग्रिम प्राप्त (Advance ₹)
-            </label>
-            <input type="number" id="m-advance" value="500" min="0"
-              class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">
-          </div>
-        </div>
-
-        <!-- Notes / Sankalp details -->
-        <div>
-          <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1" data-i18n="special_notes">
-            संकल्प टिप्पणी / विशेष निर्देश
-          </label>
-          <textarea id="m-notes" rows="2" placeholder="यजमान परिवार के सदस्यों के नाम अथवा विशेष मनोकामना..."
-            class="w-full px-3 py-2 bg-amber-50/50 border border-amber-300 rounded-xl text-xs font-medium focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
-        </div>
-
-        <!-- Modal Actions -->
-        <div class="pt-3 border-t border-amber-200 flex items-center justify-end space-x-2">
-          <button type="button" onclick="closeAddPujaModal()" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold rounded-xl transition" data-i18n="cancel_btn">
-            रद्द करें
-          </button>
-          <button type="submit" class="px-5 py-2 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white text-xs font-bold rounded-xl transition shadow" data-i18n="save_puja_btn">
-            अनुष्ठान सहेजें
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal 2: Aarti Timings Schedule Modal -->
-  <div id="aarti-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-md w-full border-2 border-gold-400 shadow-2xl overflow-hidden animate-fade-in">
-      <div class="bg-gradient-to-r from-red-900 to-orange-900 text-white p-4 flex justify-between items-center">
-        <h3 id="aarti-modal-title" class="font-devanagari font-bold text-base flex items-center gap-2">
-          <i class="fa-solid fa-clock-rotate-left"></i>
-          <span>दैनिक आरती समय सारिणी</span>
-        </h3>
-        <button onclick="closeAartiSchedule()" class="text-amber-200 hover:text-white text-lg font-bold">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <div class="p-5 font-devanagari" id="aarti-modal-content">
-        <!-- Content injected dynamically -->
-      </div>
-    </div>
-  </div>
-
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-gradient-to-b from-orange-950 to-stone-950 text-amber-200 py-10 mt-12 border-t-4 border-gold-500">
+  <footer class="bg-gradient-to-b from-maroon-950 via-stone-950 to-black text-amber-200 py-12 mt-12 border-t-4 border-gold-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-xs">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 text-xs">
         
-        <!-- Col 1 -->
+        <!-- Col 1: Identity -->
         <div class="space-y-3">
           <div class="flex items-center space-x-2">
             <span class="text-2xl text-amber-400">ॐ</span>
-            <span class="font-devanagari font-bold text-lg text-white">वैदिक सेवा संगम</span>
+            <span class="font-devanagari font-bold text-base text-white">
+              आचार्य पं० अश्वनी कुमार शुक्ल
+            </span>
           </div>
           <p class="text-amber-300/80 leading-relaxed font-devanagari">
-            सनातन वैदिक संस्कृति, पंचांग विज्ञान, जन्म कुण्डली गणना एवं पुरोहित कार्य प्रबंधन हेतु एक आधुनिक, सुदृढ़ व पूर्णतः निःशुल्क डिजिटल मंच।
+            वैदिक एवं सनातन सेवा केंद्र, गोरखपुर (उत्तर प्रदेश)। शास्त्रोक्त कर्मकाण्ड, वैदिक ज्योतिष परामर्श, श्रीमद्भागवत कथा एवं जन-कल्याणकारी अनुष्ठान।
           </p>
-          <div class="text-[11px] text-amber-400 font-mono">
-            Zero-Dependency • Pure Client-Side
+          <div class="pt-2 text-amber-300 font-semibold space-y-1">
+            <div><i class="fa-solid fa-location-dot text-saffron-400 mr-1.5"></i> गोरखपुर, उत्तर प्रदेश, भारत</div>
+            <div><i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i> <a href="tel:+917309441019" class="hover:underline">7309441019</a></div>
+            <div><i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> <a href="https://wa.me/917309441019" class="hover:underline">+91 7309441019</a></div>
           </div>
         </div>
 
-        <!-- Col 2: Quick Links -->
+        <!-- Col 2: Quick Navigation -->
         <div>
-          <h4 class="font-devanagari font-bold text-sm text-white mb-3 uppercase tracking-wider text-amber-400">
-            मुख्य सेवाएं
+          <h4 class="font-devanagari font-bold text-sm text-white mb-3 uppercase tracking-wider text-amber-400 border-b border-amber-800/60 pb-1">
+            मुख्य पृष्ठ एवं सेवाएं
           </h4>
-          <ul class="space-y-2 font-devanagari">
-            <li><a href="javascript:switchTab('panchang')" class="hover:text-amber-400 transition">• दैनिक वैदिक पंचांग</a></li>
-            <li><a href="javascript:switchTab('kundli')" class="hover:text-amber-400 transition">• जन्म कुण्डली व फलादेश</a></li>
-            <li><a href="javascript:switchTab('toolkit')" class="hover:text-amber-400 transition">• यजमान बहीखाता (Purohit Diary)</a></li>
-            <li><a href="javascript:switchTab('toolkit');switchToolkitSubTab('samagri')" class="hover:text-amber-400 transition">• पूजा सामग्री चेकलिस्ट</a></li>
-            <li><a href="javascript:switchTab('darshan')" class="hover:text-amber-400 transition">• लाइव तीर्थ दर्शन</a></li>
+          <ul class="space-y-1.5 font-devanagari text-amber-200/90">
+            <li><a href="#/about" class="hover:text-amber-400 transition">• आचार्य परिचय एवं शोध</a></li>
+            <li><a href="#/astrology" class="hover:text-amber-400 transition">• कुण्डली निर्माण व गुण मिलान</a></li>
+            <li><a href="#/panchang" class="hover:text-amber-400 transition">• दैनिक पंचांग व चौघड़िया (गोरखपुर)</a></li>
+            <li><a href="#/puja-services" class="hover:text-amber-400 transition">• रुद्राभिषेक व सत्यनारायण कथा</a></li>
+            <li><a href="#/katha-vachan" class="hover:text-amber-400 transition">• श्रीमद्भागवत सप्ताह ज्ञान यज्ञ</a></li>
+            <li><a href="#/booking" class="hover:text-amber-400 transition">• ऑनलाइन अनुष्ठान बुकिंग</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Shastras & Traditions -->
+        <!-- Col 3: Tools & Resources -->
         <div>
-          <h4 class="font-devanagari font-bold text-sm text-white mb-3 uppercase tracking-wider text-amber-400">
-            सिद्धांत एवं आधार
+          <h4 class="font-devanagari font-bold text-sm text-white mb-3 uppercase tracking-wider text-amber-400 border-b border-amber-800/60 pb-1">
+            वैदिक साधन व पुस्तकालय
           </h4>
-          <ul class="space-y-2 font-devanagari text-amber-300/80">
-            <li>• सूर्य सिद्धांत एवं लहिरी अयनांश</li>
-            <li>• पराशर होरा शास्त्र ज्योतिष गणना</li>
-            <li>• शुद्ध वैदिक समिधा व पूजन विधि</li>
-            <li>• द्वादश ज्योतिर्लिंग अधिकृत प्रसारण</li>
+          <ul class="space-y-1.5 font-devanagari text-amber-200/90">
+            <li><a href="#/mantras" class="hover:text-amber-400 transition">• १०८ जप माला गणक व मंत्र</a></li>
+            <li><a href="#/samagri" class="hover:text-amber-400 transition">• पूजा सामग्री चेकलिस्ट जनरेटर</a></li>
+            <li><a href="#/live-darshan" class="hover:text-amber-400 transition">• लाइव दर्शन एवं प्रार्थना पटल</a></li>
+            <li><a href="#/library" class="hover:text-amber-400 transition">• पूर्वांचल परम्परा व शोध लेख</a></li>
+            <li><a href="#/dakshina" class="hover:text-amber-400 transition">• दक्षिणा एवं सहयोग नीति</a></li>
+            <li><a href="#/admin" class="hover:text-amber-400 transition">• यजमान बही-खाता (प्रशासन)</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Shanti Mantra -->
-        <div class="bg-black/30 p-4 rounded-xl border border-gold-600/30">
-          <h4 class="font-devanagari font-bold text-sm text-amber-300 mb-2">
-            ॥ शांति पाठ ॥
+        <!-- Col 4: Shastric Disclaimer & Shloka -->
+        <div class="bg-black/40 p-4 rounded-xl border border-gold-600/30 space-y-2">
+          <h4 class="font-devanagari font-bold text-xs text-amber-300">
+            ॥ शास्त्रीय उद्घोष ॥
           </h4>
-          <p class="font-devanagari text-[11px] text-amber-200/90 leading-relaxed">
-            ॐ द्यौः शान्तिरन्तरिक्षं शान्तिः पृथिवी शान्तिरापः शान्तिरोषधयः शान्तिः। वनस्पतयः शान्तिर्विश्वेदेवाः शान्तिर्ब्रह्म शान्तिः सर्वं शान्तिः शान्तिरेव शान्तिः सा मा शान्तिरेधि॥ ॐ शान्तिः शान्तिः शान्तिः॥
+          <p class="font-devanagari text-[11px] text-amber-200/90 leading-relaxed italic">
+            "सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः। सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥"
           </p>
+          <div class="pt-2 border-t border-amber-900/60 text-[10px] text-gray-400 font-devanagari">
+            ज्योतिषीय फलादेश शास्त्र सम्मत गणनाओं पर आधारित पारम्परिक मार्गदर्शन है। किसी भी प्रकार के अंधविश्वास अथवा अलौकिक गारंटी का समर्थन नहीं किया जाता।
+          </div>
         </div>
 
       </div>
 
-      <div class="pt-6 border-t border-amber-900/60 flex flex-col sm:flex-row justify-between items-center text-xs text-amber-400/80 gap-2">
-        <p>© 2026 वैदिक सेवा संगम (Vedic Seva Sangam). सर्वाधिकार सुरक्षित।</p>
-        <p class="font-mono">Created with Devotion for Sanatan Dharma</p>
+      <div class="pt-6 border-t border-amber-900/60 flex flex-col sm:flex-row justify-between items-center text-xs text-amber-400/80 gap-3">
+        <p>© 2026 आचार्य पं० अश्वनी कुमार शुक्ल — वैदिक एवं सनातन सेवा केंद्र। सर्वाधिकार सुरक्षित।</p>
+        <div class="flex items-center space-x-3 text-[11px]">
+          <a href="#/legal" class="hover:underline">गोपनीयता नीति (Privacy)</a>
+          <span>•</span>
+          <a href="#/legal" class="hover:underline">नियम एवं शर्तें (Terms)</a>
+          <span>•</span>
+          <a href="#/legal" class="hover:underline">अस्वीकरण (Disclaimer)</a>
+        </div>
       </div>
     </div>
   </footer>
