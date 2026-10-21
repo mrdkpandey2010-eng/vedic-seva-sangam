@@ -538,6 +538,44 @@ const VedicAudio = {
       showToast("ॐ तानपूरा नाद सक्रिय (Tanpura Drone Playing)", "success");
       return true;
     }
+  },
+
+  playOmChant() {
+    const ctx = this.getContext();
+    const base = 136.1; // Om fundamental
+    const harmonics = [base, base * 2, base * 3];
+    harmonics.forEach((f, idx) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(f, ctx.currentTime);
+      gain.gain.setValueAtTime(0.001, ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.2 / (idx + 1), ctx.currentTime + 1.0);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 4.5);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 4.5);
+    });
+    showToast("ॐ ओंकार दिव्य नाद (Om Resonance)", "info");
+  },
+
+  playPeaceChime() {
+    const ctx = this.getContext();
+    const freqs = [432, 864, 1296]; // 432Hz cosmic harmonic
+    freqs.forEach((f, idx) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(f, ctx.currentTime);
+      gain.gain.setValueAtTime(0.18 / (idx + 1), ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 3.2);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 3.2);
+    });
+    showToast("🕊️ वैदिक शांति नाद (Vedic Peace Chime)", "info");
   }
 };
 
@@ -982,6 +1020,32 @@ const Views = {
           </div>
         </div>
 
+        <!-- Dedicated Instant Audio Call Consultation Card -->
+        <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-emerald-900 text-white p-5 rounded-2xl border-2 border-emerald-400 shadow-md flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="space-y-1 text-center md:text-left">
+            <div class="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full text-[11px] font-bold border border-emerald-400/30">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>दूरभाष व ऑडियो कॉल परामर्श (Direct Audio Call)</span>
+            </div>
+            <h4 class="font-devanagari font-bold text-base text-emerald-100">
+              आचार्य पं० अश्वनी कुमार शुक्ल जी से सीधे ऑडियो कॉल पर परामर्श लें
+            </h4>
+            <p class="text-xs text-emerald-200/90 font-devanagari max-w-xl">
+              जन्म पत्रिका फलादेश, विवाह गुण मिलान, मांगलिक विचार अथवा ग्रह शांति हेतु दूरभाष पर सीधा शास्त्रीय मार्गदर्शन प्राप्त करें।
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <a href="tel:+917309441019" class="bg-emerald-500 hover:bg-emerald-600 text-white font-devanagari font-bold text-xs px-4 py-2.5 rounded-xl shadow-md transition flex items-center gap-2 active:scale-95">
+              <i class="fa-solid fa-phone"></i>
+              <span>ऑडियो कॉल: 7309441019</span>
+            </a>
+            <a href="https://wa.me/917309441019?text=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A3%E0%A4%BE%E0%A4%AE%20%E0%A4%86%E0%A4%9Release%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%95%E0%A5%81%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A4%B2%E0%A5%80%20%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A4%BF%E0%A4%B7%20%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6%20%E0%A4%B9%E0%A5%87%E0%A4%A4%E0%A5%81%20%E0%A4%91%E0%A4%A1%E0%A4%BF%E0%A4%AF%E0%A5%8B%20%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4" target="_blank" class="bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 font-devanagari font-bold text-xs px-3.5 py-2.5 rounded-xl border border-emerald-500/40 transition flex items-center gap-1.5">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
         <!-- Cultural & Spiritual Interpretation Disclaimer -->
         <div class="p-4 bg-amber-50 rounded-xl border border-amber-300 text-xs text-gray-600 font-devanagari">
           <span class="font-bold text-maroon-950">शास्त्रीय अस्वीकरण (Astrological Disclaimer):</span>
@@ -1286,7 +1350,13 @@ const Views = {
             </h3>
 
             <div class="p-4 bg-amber-50/70 rounded-xl border border-amber-200">
-              <span class="text-[10px] font-bold text-saffron-800 uppercase bg-orange-100 px-2 py-0.5 rounded">ऋग्वेद महामंत्र</span>
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold text-saffron-800 uppercase bg-orange-100 px-2 py-0.5 rounded">ऋग्वेद महामंत्र</span>
+                <button onclick="VedicAudio.playOmChant()" title="ॐ नाद सुनें" class="bg-amber-200 hover:bg-amber-300 text-amber-950 text-[11px] px-2.5 py-1 rounded-lg font-bold border border-amber-400 flex items-center gap-1 active:scale-95 transition">
+                  <i class="fa-solid fa-volume-high text-amber-700"></i>
+                  <span>ॐ नाद श्रवण</span>
+                </button>
+              </div>
               <div class="text-lg font-devanagari font-bold text-maroon-950 mt-1">
                 ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्॥
               </div>
@@ -1296,7 +1366,13 @@ const Views = {
             </div>
 
             <div class="p-4 bg-amber-50/70 rounded-xl border border-amber-200">
-              <span class="text-[10px] font-bold text-saffron-800 uppercase bg-orange-100 px-2 py-0.5 rounded">संजीवनी मंत्र</span>
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold text-saffron-800 uppercase bg-orange-100 px-2 py-0.5 rounded">संजीवनी मंत्र</span>
+                <button onclick="VedicAudio.playTempleBell()" title="घंटा नाद सुनें" class="bg-amber-200 hover:bg-amber-300 text-amber-950 text-[11px] px-2.5 py-1 rounded-lg font-bold border border-amber-400 flex items-center gap-1 active:scale-95 transition">
+                  <i class="fa-solid fa-bell text-amber-700"></i>
+                  <span>घंटा नाद श्रवण</span>
+                </button>
+              </div>
               <div class="text-lg font-devanagari font-bold text-maroon-950 mt-1">
                 ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्। उर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय माऽमृतात्॥
               </div>
@@ -1306,7 +1382,13 @@ const Views = {
             </div>
 
             <div class="p-4 bg-amber-50/70 rounded-xl border border-amber-200">
-              <span class="text-[10px] font-bold text-saffron-800 uppercase bg-orange-100 px-2 py-0.5 rounded">शांति पाठ</span>
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold text-saffron-800 uppercase bg-orange-100 px-2 py-0.5 rounded">शांति पाठ</span>
+                <button onclick="VedicAudio.playPeaceChime()" title="शांति नाद सुनें" class="bg-emerald-100 hover:bg-emerald-200 text-emerald-950 text-[11px] px-2.5 py-1 rounded-lg font-bold border border-emerald-400 flex items-center gap-1 active:scale-95 transition">
+                  <i class="fa-solid fa-dove text-emerald-700"></i>
+                  <span>शांति नाद श्रवण</span>
+                </button>
+              </div>
               <div class="text-sm font-devanagari font-bold text-maroon-950 mt-1 leading-relaxed">
                 ॐ द्यौः शान्तिरन्तरिक्षं शान्तिः पृथिवी शान्तिरापः शान्तिरोषधयः शान्तिः। वनस्पतयः शान्तिर्विश्वेदेवाः शान्तिर्ब्रह्म शान्तिः सर्वं शान्तिः शान्तिरेव शान्तिः सा मा शान्तिरेधि॥ ॐ शान्तिः शान्तिः शान्तिः॥
               </div>
@@ -1482,21 +1564,25 @@ const Views = {
               <!-- Location Type & Address -->
               <div>
                 <label class="block font-bold text-gray-700 mb-1">स्थान प्रकार एवं पता *</label>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-2">
-                  <label class="p-2 border border-amber-300 rounded-lg flex items-center gap-2 bg-amber-50/30 cursor-pointer">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
+                  <label class="p-2 border border-amber-300 rounded-lg flex items-center gap-1.5 bg-amber-50/30 cursor-pointer hover:bg-amber-100/50">
                     <input type="radio" name="bk-loc-type" value="local_gorakhpur" checked>
-                    <span>गोरखपुर स्थानीय</span>
+                    <span>📍 गोरखपुर स्थानीय</span>
                   </label>
-                  <label class="p-2 border border-amber-300 rounded-lg flex items-center gap-2 bg-amber-50/30 cursor-pointer">
-                    <input type="radio" name="bk-loc-type" value="outstation">
-                    <span>गोरखपुर से बाहर</span>
+                  <label class="p-2 border border-emerald-300 rounded-lg flex items-center gap-1.5 bg-emerald-50/40 cursor-pointer hover:bg-emerald-100/50 font-bold text-emerald-900">
+                    <input type="radio" name="bk-loc-type" value="audio_call">
+                    <span>📞 ऑडियो कॉल</span>
                   </label>
-                  <label class="p-2 border border-amber-300 rounded-lg flex items-center gap-2 bg-amber-50/30 cursor-pointer">
+                  <label class="p-2 border border-amber-300 rounded-lg flex items-center gap-1.5 bg-amber-50/30 cursor-pointer hover:bg-amber-100/50">
                     <input type="radio" name="bk-loc-type" value="online">
-                    <span>ऑनलाइन / वीडियो</span>
+                    <span>📹 वीडियो कॉल</span>
+                  </label>
+                  <label class="p-2 border border-amber-300 rounded-lg flex items-center gap-1.5 bg-amber-50/30 cursor-pointer hover:bg-amber-100/50">
+                    <input type="radio" name="bk-loc-type" value="outstation">
+                    <span>🚗 अन्य जनपद/शहर</span>
                   </label>
                 </div>
-                <input type="text" id="bk-venue" required placeholder="पूजन स्थल का पूरा पता (उदा. मकान नं 12, सिविल लाइन्स, गोरखपुर)" class="w-full p-2.5 bg-amber-50/50 border border-amber-300 rounded-xl font-semibold">
+                <input type="text" id="bk-venue" required placeholder="पूजन स्थल / कॉलिंग विवरण (उदा. ऑडियो कॉल हेतु अपना जिला, अथवा स्थानीय पता)" class="w-full p-2.5 bg-amber-50/50 border border-amber-300 rounded-xl font-semibold">
               </div>
 
               <!-- Gotra & Sankalp -->
