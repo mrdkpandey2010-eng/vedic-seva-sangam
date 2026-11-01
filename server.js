@@ -49,7 +49,11 @@ const ENV = loadEnv();
 // ============================================================================
 // 2. NATIVE SQLITE DATABASE INITIALIZATION & MIGRATIONS
 // ============================================================================
-const dbPath = path.join(__dirname, 'data', 'vedic.db');
+const dataDir = path.join(__dirname, 'data');
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+const dbPath = path.join(dataDir, 'vedic.db');
 const db = new DatabaseSync(dbPath);
 
 function initDatabase() {
