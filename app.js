@@ -3049,6 +3049,59 @@ const SAMAGRI_DATA = [
       { name: "हवन कुंड, समिधा व हवन सामग्री", qty: "1 सेट + 2 किग्रा", req: true }
     ]
   }
+,
+  {
+    id: "navagraha",
+    name: "नवग्रह शांति, महाहवन एवं ग्रह पीड़ा निवारण सामग्री",
+    items: [
+      { name: "नवग्रह समिधा (आक, ढाक, खैर, अपामार्ग, पीपल, गूलर, शमी, दूर्वा, कुशा)", qty: "1 सेट (9 समिधा)", req: true },
+      { name: "नवग्रह वस्त्र (9 रंगों के सूती वस्त्र)", qty: "1 सेट", req: true },
+      { name: "नवग्रह धान्य (गेहूं, चावल, अरहर, मूंग, चना, सफेद तिल, उड़द, मसूर)", qty: "250-250 ग्राम", req: true },
+      { name: "हवन सामग्री व गौ घृत", qty: "1 किग्रा + 500 ग्राम", req: true },
+      { name: "काले तिल एवं जौ", qty: "500-500 ग्राम", req: true },
+      { name: "गुग्गुल, लोबान, कपूर", qty: "50-50 ग्राम", req: true },
+      { name: "रोली, अक्षत, मौली, सुपारी", qty: "1-1 पैकेट", req: true }
+    ]
+  },
+  {
+    id: "vivah",
+    name: "विवाह संस्कार पाणिग्रहण एवं सप्तपदी सामग्री",
+    items: [
+      { name: "वर-वधू जयमाला (ताजे पुष्पों की)", qty: "2 नग", req: true },
+      { name: "सप्तपदी वस्त्र व गठजोड़", qty: "1 सेट", req: true },
+      { name: "धान का लावा (खील)", qty: "1 किग्रा", req: true },
+      { name: "शुद्ध सिन्दूर (पीला व लाल)", qty: "2 डिब्बी", req: true },
+      { name: "हल्दी पाउडर व साबुत गांठ", qty: "250 ग्राम + 11 नग", req: true },
+      { name: "तांबे का कलश व नारियल", qty: "2 कलश + 2 नारियल", req: true },
+      { name: "पंचामृत व गंगाजल", qty: "यथाशक्ति", req: true },
+      { name: "हवन कुंड, समिधा व घी", qty: "1 सेट + 1 किग्रा", req: true }
+    ]
+  },
+  {
+    id: "mundan",
+    name: "मुंडन (चूड़ाकरण) एवं शिशु नामकरण संस्कार सामग्री",
+    items: [
+      { name: "शिशु हेतु नूतन पीताम्बर वस्त्र", qty: "1 जोड़ा", req: true },
+      { name: "दही एवं गंगाजल (केश गीला करने हेतु)", qty: "250 ग्राम + 1 शीशी", req: true },
+      { name: "चांदी का सिक्का / पात्र", qty: "1 नग", req: false },
+      { name: "हल्दी, रोली, अक्षत, कलावा", qty: "1-1 पैकेट", req: true },
+      { name: "कांस्य थाली व गुड़", qty: "1 थाली + 500 ग्राम", req: true },
+      { name: "हवन सामग्री व समिधा", qty: "500 ग्राम", req: true }
+    ]
+  },
+  {
+    id: "bhagwat",
+    name: "श्रीमद्भागवत सप्ताह ज्ञान यज्ञ एवं व्यासपीठ पूजन सामग्री",
+    items: [
+      { name: "श्रीमद्भागवत महापुराण ग्रन्थ", qty: "1 प्रति", req: true },
+      { name: "व्यासपीठ पीताम्बर वस्त्र", qty: "2.5 मीटर", req: true },
+      { name: "तुलसी काष्ठ माला व 108 तुलसी दल", qty: "1 माला + 108 पत्ते", req: true },
+      { name: "शंख व घंटी", qty: "1-1 नग", req: true },
+      { name: "अखण्ड ज्योति हेतु गौ घृत", qty: "5 किग्रा", req: true },
+      { name: "पंचामृत सामग्री", qty: "नित्य 7 दिन हेतु", req: true },
+      { name: "दैनिक आरती कर्पूर व धूप", qty: "7 दिन हेतु", req: true }
+    ]
+  }
 ];
 
 // ----------------------------------------------------------------------------
@@ -4450,51 +4503,132 @@ const Views = {
   },
 
   // --- VIEW: JAAP MALA (१०८ रुद्राक्ष माला जाप) ---
+  // --- VIEW: JAAP MALA & AUTHENTIC MANTRAS (१०८ रुद्राक्ष माला जाप व मन्त्र संग्रह) ---
   jaap() {
     return `
-      <div class="space-y-4 max-w-xl mx-auto">
-        <div class="glass-ribbon rounded-3xl p-4 shadow-md border-2 border-amber-300/80 text-center space-y-1">
-          <span class="text-3xl">📿</span>
-          <h2 class="font-heading font-black text-base sm:text-lg text-red-950">
-            पंचमुखी रुद्राक्ष १०८ माला जाप काउण्टर
-          </h2>
-          <p class="text-xs text-amber-900 font-medium">ध्वनि नाद एवं तानपूरा ॐ सहित नित्य साधना</p>
+      <div class="space-y-6">
+        <div class="glass-ribbon rounded-3xl p-4 sm:p-6 shadow-md border-2 border-amber-300/80 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center md:text-left">
+            <span class="text-3xl">📿</span>
+            <h2 class="font-heading font-black text-xl sm:text-2xl text-red-950">
+              वैदिक मंत्र, नाद ब्रह्म एवं १०८ रुद्राक्ष जप माला
+            </h2>
+            <p class="text-xs font-bold text-amber-900">वेब ऑडियो एपीआई आधारित तानपूरा नाद (Sa-Pa 136.1Hz), मनका गणक एवं प्रामाणिक महामंत्र</p>
+          </div>
+          <button onclick="VedicAudio.toggleTanpuraDrone()" class="glass-btn-3d glass-btn-3d-gold px-4 py-2.5 rounded-xl text-xs font-black text-red-950 flex items-center gap-2 shrink-0">
+            <span>ॐ</span> <span>तानपूरा नाद चालू/बंद</span>
+          </button>
         </div>
 
-        <div class="glass-ribbon rounded-3xl p-6 shadow-xl border-2 border-amber-400 text-center space-y-4">
-          <!-- Counter Display -->
-          <div class="relative w-44 h-44 mx-auto rounded-full bg-gradient-to-tr from-amber-100 via-orange-100 to-amber-200 border-4 border-amber-500 shadow-inner flex flex-col items-center justify-center select-none">
-            <span id="bead-count" class="font-heading font-black text-5xl text-red-950">0</span>
-            <span class="text-xs font-bold text-amber-900 uppercase tracking-widest mt-1">/ १०८ मंत्र</span>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Left: 108 Japa Mala Counter -->
+          <div class="lg:col-span-5 glass-ribbon rounded-3xl p-6 shadow-xl border-2 border-amber-400 text-center space-y-4 font-devanagari">
+            <h3 class="font-heading font-black text-base text-red-950">१०८ मनका जप माला साधना</h3>
+            <p class="text-[11px] text-gray-600">मनका फेरने हेतु स्पर्श करें • स्वतः ध्वनि व कम्पन</p>
+
+            <!-- Counter Display -->
+            <div class="relative w-44 h-44 mx-auto rounded-full bg-gradient-to-tr from-amber-100 via-orange-100 to-amber-200 border-4 border-amber-500 shadow-inner flex flex-col items-center justify-center select-none">
+              <span id="bead-count" class="font-heading font-black text-5xl text-red-950">0</span>
+              <span class="text-xs font-bold text-amber-900 uppercase tracking-widest mt-1">/ १०८ मनके</span>
+            </div>
+
+            <!-- Total Malas Completed -->
+            <div class="text-xs font-bold text-amber-950 bg-amber-100/80 py-1.5 px-4 rounded-full inline-block border border-amber-300">
+              पूर्ण माला: <span id="total-malas-count" class="text-red-950 font-black text-sm">0</span>
+            </div>
+
+            <!-- Big Tap Button -->
+            <div>
+              <button onclick="handleBeadTap()" class="glass-btn-3d glass-btn-3d-saffron w-full py-4 rounded-2xl font-black text-base sm:text-lg text-white shadow-lg active:scale-95 transition flex items-center justify-center gap-2">
+                <span>📿</span> <span>मनका फेरें (Tap Bead)</span>
+              </button>
+            </div>
+
+            <!-- Controls -->
+            <div class="flex items-center justify-center gap-2 pt-2 text-xs">
+              <button onclick="resetBeadCount()" class="px-3 py-1.5 rounded-xl bg-white border border-gray-300 font-bold text-gray-700 hover:bg-gray-50">
+                ↺ रीसेट करें
+              </button>
+              <button onclick="VedicAudio.playOmChant()" class="px-3 py-1.5 rounded-xl bg-amber-200 text-amber-950 font-black hover:bg-amber-300">
+                ॐ नाद
+              </button>
+              <button onclick="VedicAudio.playTempleBell()" class="px-3 py-1.5 rounded-xl bg-amber-200 text-amber-950 font-black hover:bg-amber-300">
+                🔔 घंटी
+              </button>
+            </div>
           </div>
 
-          <!-- Total Malas Completed -->
-          <div class="text-xs font-bold text-amber-950 bg-amber-100/80 py-1.5 px-4 rounded-full inline-block border border-amber-300">
-            कुल संपन्न माला: <span id="total-malas-count" class="text-red-950 font-black text-sm">0</span>
-          </div>
+          <!-- Right: Categorized Vedic Mantras -->
+          <div class="lg:col-span-7 space-y-4 font-devanagari">
+            <div class="glass-ribbon rounded-3xl p-5 border-2 border-amber-300/80 shadow-md space-y-4">
+              <div class="flex items-center justify-between border-b border-amber-200 pb-2">
+                <h3 class="font-heading font-black text-base text-red-950">प्रामाणिक वैदिक महामंत्र संग्रह</h3>
+                <span class="text-[10px] font-bold text-orange-800 bg-orange-100 px-2 py-0.5 rounded-full">वेदोक्त पाठ</span>
+              </div>
 
-          <!-- Big Tap Button -->
-          <div>
-            <button onclick="handleBeadTap()" class="glass-btn-3d glass-btn-3d-saffron w-full py-4 rounded-2xl font-black text-base sm:text-lg text-white shadow-lg active:scale-95 transition">
-              📿 मंत्र जपें (स्पर्श करें)
-            </button>
-          </div>
+              <!-- Gayatri Mantra -->
+              <div class="p-4 bg-white/90 rounded-2xl border border-amber-200 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold text-orange-800 bg-orange-100 px-2 py-0.5 rounded-full uppercase">ऋग्वेद महामंत्र</span>
+                  <button onclick="VedicAudio.playOmChant()" class="glass-btn-3d glass-btn-3d-gold px-2.5 py-1 rounded-lg text-[10px] font-black text-red-950 flex items-center gap-1">
+                    <i class="fa-solid fa-volume-high"></i> <span>ॐ नाद श्रवण</span>
+                  </button>
+                </div>
+                <div class="text-base sm:text-lg font-heading font-black text-red-950 leading-relaxed">
+                  ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्॥
+                </div>
+                <p class="text-xs text-gray-700 italic">
+                  <strong>भावार्थ:</strong> उस प्राणस्वरूप, दुःखनाशक, सुखस्वरूप, श्रेष्ठ तेजस्वी परमात्मा का ध्यान करते हैं जो हमारी बुद्धि को सन्मार्ग की ओर प्रेरित करे।
+                </p>
+              </div>
 
-          <!-- Controls -->
-          <div class="flex items-center justify-center gap-2 pt-2">
-            <button onclick="resetBeadCount()" class="px-3 py-1.5 rounded-xl bg-white border border-gray-300 text-xs font-bold text-gray-700 hover:bg-gray-50">
-              ↺ रीसेट करें
-            </button>
-            <button onclick="VedicAudio.toggleTanpuraDrone()" class="px-3 py-1.5 rounded-xl bg-amber-500 text-red-950 text-xs font-black hover:bg-amber-600">
-              ॐ तानपूरा ऑन/ऑफ
-            </button>
+              <!-- Mahamrityunjaya Mantra -->
+              <div class="p-4 bg-white/90 rounded-2xl border border-amber-200 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold text-red-800 bg-red-100 px-2 py-0.5 rounded-full uppercase">संजीवनी मंत्र</span>
+                  <button onclick="VedicAudio.playTempleBell()" class="glass-btn-3d glass-btn-3d-gold px-2.5 py-1 rounded-lg text-[10px] font-black text-red-950 flex items-center gap-1">
+                    <i class="fa-solid fa-bell"></i> <span>घण्टा नाद</span>
+                  </button>
+                </div>
+                <div class="text-base sm:text-lg font-heading font-black text-red-950 leading-relaxed">
+                  ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्। उर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय माऽमृतात्॥
+                </div>
+                <p class="text-xs text-gray-700 italic">
+                  <strong>भावार्थ:</strong> त्रिनेत्रधारी भगवान शिव की आराधना करते हैं जो जीवन शक्ति की पुष्टि करते हैं। हम मृत्यु के सांसारिक बंधनों से मुक्त होकर अमरत्व को प्राप्त हों।
+                </p>
+              </div>
+
+              <!-- Shanti Path -->
+              <div class="p-4 bg-white/90 rounded-2xl border border-amber-200 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full uppercase">वैदिक शांति पाठ</span>
+                  <button onclick="VedicAudio.playPeaceChime()" class="glass-btn-3d glass-btn-3d-emerald px-2.5 py-1 rounded-lg text-[10px] font-black text-white flex items-center gap-1">
+                    <i class="fa-solid fa-dove"></i> <span>शांति नाद</span>
+                  </button>
+                </div>
+                <div class="text-xs sm:text-sm font-heading font-black text-red-950 leading-relaxed">
+                  ॐ द्यौः शान्तिरन्तरिक्षं शान्तिः पृथिवी शान्तिरापः शान्तिरोषधयः शान्तिः। वनस्पतयः शान्तिर्विश्वेदेवाः शान्तिर्ब्रह्म शान्तिः सर्वं शान्तिः शान्तिरेव शान्तिः सा मा शान्तिरेधि॥ ॐ शान्तिः शान्तिः शान्तिः॥
+                </div>
+              </div>
+
+              <!-- Shri Suktam & Shiva Panchakshara -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-200 space-y-1">
+                  <span class="text-[10px] font-black text-amber-900 bg-amber-200/80 px-2 py-0.5 rounded">महालक्ष्मी महामंत्र</span>
+                  <div class="text-xs font-bold text-red-950">ॐ श्रीं ह्रीं श्रीं कमले कमलालये प्रसीद प्रसीद श्रीं ह्रीं श्रीं ॐ महालक्ष्म्यै नमः॥</div>
+                </div>
+                <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-200 space-y-1">
+                  <span class="text-[10px] font-black text-amber-900 bg-amber-200/80 px-2 py-0.5 rounded">शिव पंचाक्षर मंत्र</span>
+                  <div class="text-xs font-bold text-red-950">ॐ नमः शिवाय (नागेन्द्रहाराय त्रिलोचनाय भस्माङ्गरागाय महेश्वराय)॥</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     `;
   },
 
-  // --- VIEW: TEMPLE LIVE (१३ मंदिर लाइव दर्शन) ---
   templeLive() {
     return `
       <div class="space-y-4">
@@ -4539,6 +4673,34 @@ const Views = {
               </div>
             </div>
           `).join('')}
+        </div>
+
+        <!-- Live Prayer Wall Submission & Feed -->
+        <div class="glass-ribbon rounded-3xl p-4 sm:p-6 shadow-md border-2 border-amber-300/80 space-y-4">
+          <div class="flex items-center justify-between border-b border-amber-200 pb-2 flex-wrap gap-2">
+            <div>
+              <h3 class="font-heading font-black text-base sm:text-lg text-red-950">
+                🙏 भक्त सामूहिक प्रार्थना एवं मनोरथ पटल (Live Prayer Wall)
+              </h3>
+              <p class="text-xs text-amber-900 font-medium">घर बैठे अपना पावन मनोरथ व प्रार्थना संदेश जोड़ें</p>
+            </div>
+            <button onclick="VedicAudio.playPeaceChime()" class="glass-btn-3d glass-btn-3d-emerald px-3.5 py-1.5 rounded-xl text-xs font-black text-white">
+              🕊️ शांति नाद
+            </button>
+          </div>
+          <form onsubmit="handlePrayerSubmit(event)" class="space-y-2 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <input type="text" id="prayer-name" required placeholder="आपका नाम (उदा. सुरेश शुक्ल)" class="p-2.5 rounded-xl border border-gray-300 bg-white">
+              <input type="text" id="prayer-city" required placeholder="नगर/स्थान (उदा. गोरखपुर)" class="p-2.5 rounded-xl border border-gray-300 bg-white">
+            </div>
+            <textarea id="prayer-text" rows="2" required placeholder="अपना मनोरथ, मनोकामना अथवा प्रार्थना संदेश यहाँ लिखें..." class="w-full p-2.5 rounded-xl border border-gray-300 bg-white"></textarea>
+            <button type="submit" class="glass-btn-3d glass-btn-3d-saffron px-5 py-2.5 rounded-xl font-black text-white text-xs">
+              प्रार्थना पटल पर जोड़ें →
+            </button>
+          </form>
+          <div id="prayers-list" class="space-y-2 pt-2">
+            <!-- Loaded dynamically via loadPrayers() -->
+          </div>
         </div>
       </div>
     `;
@@ -4825,6 +4987,492 @@ const Views = {
       </div>
     `;
   }
+
+  // --- VIEW: ABOUT ACHARYA (आचार्य परिचय एवं शोध) ---
+  about() {
+    return `
+      <div class="space-y-6">
+        <!-- Hero Header -->
+        <div class="glass-ribbon rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-amber-300/80 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-950 px-3 py-1 rounded-full text-xs font-black border border-amber-300">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 live-dot"></span>
+              <span>गोरखपुर, उत्तर प्रदेश • वैदिक एवं सनातन सेवा केंद्र</span>
+            </div>
+            <h1 class="font-heading font-black text-2xl sm:text-4xl text-red-950 leading-tight">
+              आचार्य पं० अश्वनी कुमार शुक्ल
+            </h1>
+            <p class="text-sm sm:text-base font-bold text-amber-900 font-devanagari">
+              वैदिक कर्मकाण्ड मर्मज्ञ, फलित ज्योतिष शोधार्थी एवं श्रीमद्भागवत कथा व्यास
+            </p>
+            <p class="text-xs text-gray-700 leading-relaxed max-w-2xl font-devanagari">
+              पूर्वांचल की पावन तपोभूमि गोरखपुर से सनातन वैदिक संस्कारों, शुद्ध वेदोक्त अनुष्ठानों, महायज्ञों एवं प्रामाणिक जन्म कुण्डली मार्गदर्शन हेतु समर्पित आध्यात्मिक संस्थान।
+            </p>
+          </div>
+          <div class="shrink-0 flex flex-col sm:flex-row md:flex-col gap-2.5 w-full md:w-auto">
+            <a href="tel:+917309441019" class="glass-btn-3d glass-btn-3d-emerald px-5 py-3 rounded-2xl text-xs sm:text-sm font-black text-white text-center flex items-center justify-center gap-2">
+              <i class="fa-solid fa-phone"></i>
+              <span>7309441019 पर संपर्क करें</span>
+            </a>
+            <a href="https://wa.me/917309441019?text=नमस्ते%20आचार्य%20जी,%20मुझे%20परामर्श%20हेतु%20जानकारी%20चाहिए।" target="_blank" class="glass-btn-3d glass-btn-3d-gold px-5 py-3 rounded-2xl text-xs sm:text-sm font-black text-red-950 text-center flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-700 text-base"></i>
+              <span>WhatsApp परामर्श</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Detailed Biography & Spiritual Lineage -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="glass-ribbon rounded-3xl p-6 shadow-md border-2 border-amber-300/80 space-y-3 font-devanagari">
+            <h3 class="font-heading font-black text-lg text-red-950 border-b border-amber-200 pb-2 flex items-center gap-2">
+              <span>📜</span> <span>साधना पृष्ठभूमि एवं गुरु परम्परा</span>
+            </h3>
+            <p class="text-xs text-gray-800 leading-relaxed">
+              आचार्य पं० अश्वनी कुमार शुक्ल जी शुक्लयजुर्वेद माध्यन्दिनीय शाखा के वेदोक्त कर्मकाण्ड, अष्टादश महापुराण एवं पराशरी ज्योतिष परम्परा के निष्ठावान साधक हैं। काशी एवं पूर्वांचल के प्रकाण्ड आचार्यों के सानिध्य में आपने वेद-वेदांग, षोडश संस्कार, रुद्राष्टाध्यायी एवं फलित ज्योतिष का गहन अध्ययन संपन्न किया है।
+            </p>
+            <p class="text-xs text-gray-800 leading-relaxed">
+              विगत 15 से अधिक वर्षों से आप देश-विदेश के सैकड़ों यजमान परिवारों के यहाँ श्रीमद्भागवत सप्ताह ज्ञान यज्ञ, श्री राम कथा, महारुद्राभिषेक, नूतन गृह प्रवेश एवं महायज्ञों का शास्त्रीय रीति से संचालन करते आ रहे हैं।
+            </p>
+          </div>
+
+          <div class="glass-ribbon rounded-3xl p-6 shadow-md border-2 border-amber-300/80 space-y-3 font-devanagari">
+            <h3 class="font-heading font-black text-lg text-red-950 border-b border-amber-200 pb-2 flex items-center gap-2">
+              <span>🎓</span> <span>शास्त्रीय योग्यता एवं शोध क्षेत्र</span>
+            </h3>
+            <ul class="space-y-2 text-xs text-gray-800">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-600 font-black">✦</span>
+                <span><strong>आचार्य उपाधि:</strong> सम्पूर्णानन्द संस्कृत विश्वविद्यालय परम्परा से ज्योतिष एवं कर्मकाण्ड में विशिष्ट योग्यता।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-600 font-black">✦</span>
+                <span><strong>पूर्वांचल शोध:</strong> पूर्वांचल अंचल की वैदिक मान्यताओं, लोक संस्कारों एवं राप्ती-सरयू तीरे वैदिक परम्पराओं पर प्रामाणिक शोध।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-600 font-black">✦</span>
+                <span><strong>500+ सफल आयोजन:</strong> श्रीमद्भागवत सप्ताह, महारुद्राभिषेक, नवचंडी महायज्ञ एवं वास्तु शांति अनुष्ठान।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-600 font-black">✦</span>
+                <span><strong>निष्ठा:</strong> सनातन परम्परा की शुचिता, स्वेच्छा दक्षिणा एवं यजमान कल्याण हेतु निष्काम सेवा भाव।</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Key Pillars Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="glass-ribbon rounded-3xl p-4 shadow-sm border border-amber-300 text-center space-y-2">
+            <span class="text-3xl">📖</span>
+            <h4 class="font-heading font-black text-sm text-red-950">भागवत एवं राम कथा</h4>
+            <p class="text-[11px] text-gray-700">7 दिवसीय संगीतमय श्रीमद्भागवत कथा एवं 9 दिवसीय रामकथा नवाह्न परायण।</p>
+            <a href="#katha-vachan" class="inline-block text-xs font-bold text-orange-700 hover:underline">कथा विवरण देखें →</a>
+          </div>
+          <div class="glass-ribbon rounded-3xl p-4 shadow-sm border border-amber-300 text-center space-y-2">
+            <span class="text-3xl">🕉️</span>
+            <h4 class="font-heading font-black text-sm text-red-950">वैदिक कर्मकाण्ड</h4>
+            <p class="text-[11px] text-gray-700">रुद्राभिषेक, सत्यनारायण कथा, नवग्रह शांति एवं षोडश संस्कार।</p>
+            <a href="#rituals" class="inline-block text-xs font-bold text-orange-700 hover:underline">अनुष्ठान सूची →</a>
+          </div>
+          <div class="glass-ribbon rounded-3xl p-4 shadow-sm border border-amber-300 text-center space-y-2">
+            <span class="text-3xl">🔮</span>
+            <h4 class="font-heading font-black text-sm text-red-950">कुण्डली एवं ज्योतिष</h4>
+            <p class="text-[11px] text-gray-700">36 गुण मिलान, लग्न चक्र, मांगलिक विचार व साढ़े साती विश्लेषण।</p>
+            <a href="#milan" class="inline-block text-xs font-bold text-orange-700 hover:underline">कुण्डली साधन →</a>
+          </div>
+          <div class="glass-ribbon rounded-3xl p-4 shadow-sm border border-amber-300 text-center space-y-2">
+            <span class="text-3xl">📦</span>
+            <h4 class="font-heading font-black text-sm text-red-950">सामग्री चेकलिस्ट</h4>
+            <p class="text-[11px] text-gray-700">7 प्रमुख पूजाओं की शास्त्रोक्त सामग्री सूची, टिक-मार्क व WhatsApp शेयर।</p>
+            <a href="#samagri" class="inline-block text-xs font-bold text-orange-700 hover:underline">चेकलिस्ट खोलें →</a>
+          </div>
+        </div>
+
+        <!-- Gorakhpur Seva Kendra Address & Contact Card -->
+        <div class="glass-ribbon rounded-3xl p-6 shadow-md border-2 border-amber-300/80 font-devanagari flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-1.5 text-center md:text-left">
+            <div class="text-xs font-black text-orange-800 uppercase tracking-wider">अधिकृत सेवा केंद्र</div>
+            <h3 class="font-heading font-black text-lg text-red-950">
+              आचार्य पं० अश्वनी कुमार शुक्ल — वैदिक एवं सनातन सेवा केंद्र
+            </h3>
+            <p class="text-xs text-gray-700">
+              📍 तारामण्डल / राप्ती तट परिक्षेत्र, गोरखपुर, उत्तर प्रदेश, भारत (पिन: 273001)
+            </p>
+            <p class="text-xs text-gray-600">
+              दैनिक परामर्श समय: प्रातः 08:00 से रात्रि 09:00 बजे तक (सपरिवार प्रत्यक्ष दर्शन अथवा दूरभाष)
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <a href="#booking" class="glass-btn-3d glass-btn-3d-saffron px-4 py-2.5 rounded-xl text-xs font-black text-white">
+              ✨ अनुष्ठान बुक करें
+            </a>
+            <a href="#dakshina" class="glass-btn-3d glass-btn-3d-gold px-4 py-2.5 rounded-xl text-xs font-black text-red-950">
+              🪙 दक्षिणा नीति देखें
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  // --- VIEW: KATHA VACHAN (श्रीमद्भागवत एवं राम कथा वाचन) ---
+  kathaVachan() {
+    return `
+      <div class="space-y-6">
+        <!-- Header Ribbon -->
+        <div class="glass-ribbon rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-amber-300/80 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-950 px-3 py-1 rounded-full text-xs font-black border border-orange-300">
+              <span>📖</span>
+              <span>व्यासपीठ अमृत वर्षा</span>
+            </div>
+            <h2 class="font-heading font-black text-2xl sm:text-3xl text-red-950">
+              श्रीमद्भागवत एवं श्री राम कथा वाचन
+            </h2>
+            <p class="text-xs sm:text-sm font-bold text-amber-900">
+              आचार्य पं० अश्वनी कुमार शुक्ल जी के पावन सानिध्य में संगीतमय ज्ञान यज्ञ
+            </p>
+          </div>
+          <a href="#booking" class="glass-btn-3d glass-btn-3d-saffron px-5 py-3 rounded-2xl text-xs sm:text-sm font-black text-white shrink-0">
+            ✨ कथा अनुष्ठान बुक करें
+          </a>
+        </div>
+
+        <!-- 3 Major Katha Offerings -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- 1. Shrimad Bhagwat Saptah -->
+          <div class="glass-ribbon rounded-3xl p-5 border-2 border-amber-300/80 shadow-md flex flex-col justify-between space-y-4 font-devanagari">
+            <div class="space-y-2">
+              <span class="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-950 border border-orange-300">
+                7 दिवसीय ज्ञान यज्ञ
+              </span>
+              <h3 class="font-heading font-black text-lg text-red-950">श्रीमद्भागवत सप्ताह ज्ञान यज्ञ</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">
+                गोकर्ण उपाख्यान, राजा परीक्षित मोक्ष, कपिल देवहूति संवाद, ध्रुव-प्रह्लाद चरित्र, श्रीकृष्ण जन्मोत्सव (नंदोत्सव), गोवर्धन पूजा, महारास, रुक्मिणी विवाह एवं सुदामा चरित्र का भावपूर्ण, संगीतमय गायन।
+              </p>
+              <div class="p-3 bg-white/80 rounded-xl border border-amber-200 text-xs text-amber-950 font-bold space-y-1">
+                <div>फल: पितृ तृप्ति, सर्वपाप मुक्ति एवं कुल कल्याण</div>
+                <div>अवधि: नित्य 4 से 5 घंटे (7 दिवस)</div>
+              </div>
+            </div>
+            <a href="#booking" class="glass-btn-3d glass-btn-3d-gold w-full py-2.5 rounded-xl text-xs font-black text-red-950 text-center block">
+              भागवत कथा निश्चित करें →
+            </a>
+          </div>
+
+          <!-- 2. Shri Ram Katha -->
+          <div class="glass-ribbon rounded-3xl p-5 border-2 border-amber-300/80 shadow-md flex flex-col justify-between space-y-4 font-devanagari">
+            <div class="space-y-2">
+              <span class="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-red-100 text-red-950 border border-red-300">
+                9 दिवसीय नवाह्न परायण
+              </span>
+              <h3 class="font-heading font-black text-lg text-red-950">मर्यादा पुरुषोत्तम श्री राम कथा</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">
+                गोस्वामी तुलसीदास जी विरचित श्रीरामचरितमानस के सातों काण्डों (बालकाण्ड से उत्तरकाण्ड) का प्रामाणिक, मर्यादा एवं भक्ति रस से ओतप्रोत वाचन। सजीव झांकियां एवं सामूहिक सुंदरकांड पाठ।
+              </p>
+              <div class="p-3 bg-white/80 rounded-xl border border-amber-200 text-xs text-amber-950 font-bold space-y-1">
+                <div>फल: गृह क्लेश शांति, मर्यादा एवं राम कृपा प्राप्ति</div>
+                <div>अवधि: नित्य 3 से 4 घंटे (9 दिवस)</div>
+              </div>
+            </div>
+            <a href="#booking" class="glass-btn-3d glass-btn-3d-gold w-full py-2.5 rounded-xl text-xs font-black text-red-950 text-center block">
+              श्री राम कथा निश्चित करें →
+            </a>
+          </div>
+
+          <!-- 3. Shiv Mahapuran Katha -->
+          <div class="glass-ribbon rounded-3xl p-5 border-2 border-amber-300/80 shadow-md flex flex-col justify-between space-y-4 font-devanagari">
+            <div class="space-y-2">
+              <span class="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-950 border border-emerald-300">
+                7 दिवसीय महारुद्र कथा
+              </span>
+              <h3 class="font-heading font-black text-lg text-red-950">श्री शिव महापुराण कथा</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">
+                रुद्र संहिता, सती चरित्र, शिव-पार्वती विवाह, कार्तिकेय-गणेश जन्म, 12 ज्योतिर्लिंगों की महिमा एवं नित्य सविधि पार्थिव शिवलिंग निर्माण व महारुद्राभिषेक पूजन।
+              </p>
+              <div class="p-3 bg-white/80 rounded-xl border border-amber-200 text-xs text-amber-950 font-bold space-y-1">
+                <div>फल: अकाल मृत्यु निवारण, आरोग्य एवं शिव सायुज्य</div>
+                <div>अवधि: नित्य 3 से 4 घंटे (7 दिवस)</div>
+              </div>
+            </div>
+            <a href="#booking" class="glass-btn-3d glass-btn-3d-gold w-full py-2.5 rounded-xl text-xs font-black text-red-950 text-center block">
+              शिव महापुराण निश्चित करें →
+            </a>
+          </div>
+        </div>
+
+        <!-- Katha Guidelines & Organizer Rules -->
+        <div class="glass-ribbon rounded-3xl p-6 shadow-md border-2 border-amber-300/80 font-devanagari space-y-4">
+          <h3 class="font-heading font-black text-base sm:text-lg text-red-950 border-b border-amber-200 pb-2">
+            📋 कथा आयोजन हेतु यजमान व्यवस्था एवं शास्त्रोक्त नियम
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-800 leading-relaxed">
+            <div class="p-4 bg-white/80 rounded-2xl border border-amber-200 space-y-2">
+              <h4 class="font-bold text-red-950 flex items-center gap-1.5">
+                <span>🪔</span> <span>व्यासपीठ एवं मण्डप व्यवस्था</span>
+              </h4>
+              <p>कथा स्थल पर शुद्ध, पूर्व अथवा उत्तरमुखी व्यासपीठ, मंगल कलश, अखण्ड दीप एवं पोथी पूजन हेतु स्वच्छ वेदी का निर्माण किया जाना चाहिए।</p>
+            </div>
+            <div class="p-4 bg-white/80 rounded-2xl border border-amber-200 space-y-2">
+              <h4 class="font-bold text-red-950 flex items-center gap-1.5">
+                <span>🪙</span> <span>दक्षिणा एवं सहयोग नीति</span>
+              </h4>
+              <p>आचार्य जी द्वारा कथा वाचन में स्वेच्छा दक्षिणा नीति का पालन किया जाता है। यजमान अपनी सामर्थ्य एवं श्रद्धानुसार दक्षिणा संकल्प करते हैं।</p>
+            </div>
+          </div>
+          <div class="text-center pt-2">
+            <a href="tel:+917309441019" class="glass-btn-3d glass-btn-3d-emerald px-6 py-3 rounded-xl text-xs font-black text-white inline-flex items-center gap-2">
+              <i class="fa-solid fa-phone"></i>
+              <span>सीधे आचार्य जी से तिथियों व मुहूर्त पर वार्ता करें (7309441019)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  // --- VIEW: LIBRARY (सनातन ज्ञान एवं शोध पुस्तकालय) ---
+  library() {
+    return `
+      <div class="space-y-6">
+        <!-- Header -->
+        <div class="glass-ribbon rounded-3xl p-6 shadow-xl border-2 border-amber-300/80 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-950 px-3 py-1 rounded-full text-xs font-black border border-amber-300">
+              <span>📚</span>
+              <span>ज्ञान, संस्कार एवं शोध</span>
+            </div>
+            <h2 class="font-heading font-black text-2xl sm:text-3xl text-red-950">
+              सनातन ज्ञान एवं शोध पुस्तकालय
+            </h2>
+            <p class="text-xs sm:text-sm font-bold text-amber-900">
+              पूर्वांचल वैदिक परम्पराएं, शास्त्रोक्त विधान एवं आचार्य जी के प्रामाणिक शोध लेख
+            </p>
+          </div>
+          <!-- Search Input -->
+          <div class="w-full md:w-80">
+            <input type="text" id="lib-search" oninput="searchLibraryArticles()" placeholder="लेख खोजें (जैसे: परम्परा, वास्तु, भागवत)..." class="w-full p-2.5 rounded-xl border border-amber-300 bg-white text-xs font-medium shadow-inner focus:outline-none focus:ring-2 focus:ring-amber-500">
+          </div>
+        </div>
+
+        <!-- Filter Category Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar text-xs font-bold text-amber-950 pb-1">
+          <button onclick="searchLibraryArticles('all')" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-red-900 to-amber-900 text-white shadow-xs">
+            सभी लेख
+          </button>
+          <button onclick="searchLibraryArticles('purvanchal_traditions')" class="px-3 py-1.5 rounded-xl bg-white border border-amber-200 hover:bg-amber-100 transition">
+            पूर्वांचल परम्परा
+          </button>
+          <button onclick="searchLibraryArticles('vedic_philosophy')" class="px-3 py-1.5 rounded-xl bg-white border border-amber-200 hover:bg-amber-100 transition">
+            वैदिक दर्शन व भागवत
+          </button>
+          <button onclick="searchLibraryArticles('karmakand_vidhi')" class="px-3 py-1.5 rounded-xl bg-white border border-amber-200 hover:bg-amber-100 transition">
+            कर्मकाण्ड व वास्तु विधि
+          </button>
+        </div>
+
+        <!-- Articles Grid Container -->
+        <div id="articles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Populated dynamically via searchLibraryArticles() -->
+        </div>
+      </div>
+    `;
+  },
+
+  // --- VIEW: EVENTS (आगामी कार्यक्रम एवं धार्मिक आयोजन) ---
+  events() {
+    return `
+      <div class="space-y-6">
+        <div class="glass-ribbon rounded-3xl p-6 shadow-xl border-2 border-amber-300/80 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-950 px-3 py-1 rounded-full text-xs font-black border border-orange-300">
+              <span>📅</span>
+              <span>धार्मिक कार्यक्रम पंचांग</span>
+            </div>
+            <h2 class="font-heading font-black text-2xl sm:text-3xl text-red-950">
+              आगामी कार्यक्रम एवं धार्मिक आयोजन
+            </h2>
+            <p class="text-xs sm:text-sm font-bold text-amber-900">
+              आचार्य जी के आगामी श्रीमद्भागवत सप्ताह, महारुद्राभिषेक एवं धार्मिक सत्रों का विवरण
+            </p>
+          </div>
+          <a href="#booking" class="glass-btn-3d glass-btn-3d-saffron px-5 py-3 rounded-2xl text-xs sm:text-sm font-black text-white shrink-0">
+            ✨ नया अनुष्ठान बुक करें
+          </a>
+        </div>
+
+        <!-- Events Timeline List -->
+        <div id="events-timeline-container" class="space-y-4">
+          <!-- Populated dynamically via loadEventsTimeline() -->
+        </div>
+      </div>
+    `;
+  },
+
+  // --- VIEW: SAMAGRI (पूजा सामग्री चेकलिस्ट जनरेटर) ---
+  samagri() {
+    return `
+      <div class="space-y-6">
+        <div class="glass-ribbon rounded-3xl p-6 shadow-xl border-2 border-amber-300/80 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-950 px-3 py-1 rounded-full text-xs font-black border border-amber-300">
+              <span>📦</span>
+              <span>शास्त्रोक्त संकलन</span>
+            </div>
+            <h2 class="font-heading font-black text-2xl sm:text-3xl text-red-950">
+              पूजा सामग्री चेकलिस्ट जनरेटर
+            </h2>
+            <p class="text-xs sm:text-sm font-bold text-amber-900">
+              अनुष्ठान पूर्व यजमान हेतु सामग्री संकलन, टिक मार्क, प्रिंट एवं WhatsApp शेयर
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="printSamagriSlip()" class="glass-btn-3d glass-btn-3d-gold px-4 py-2.5 rounded-xl text-xs font-black text-red-950 flex items-center gap-1.5">
+              <span>🖨️</span> <span>पर्ची प्रिंट</span>
+            </button>
+            <button onclick="copySamagriWhatsApp()" class="glass-btn-3d glass-btn-3d-emerald px-4 py-2.5 rounded-xl text-xs font-black text-white flex items-center gap-1.5">
+              <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp भेजें</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Puja Selector and Checklist Container -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Left: Selector -->
+          <div class="glass-ribbon rounded-3xl p-4 border-2 border-amber-300/80 shadow-md space-y-3 font-devanagari">
+            <h3 class="font-heading font-black text-sm text-red-950 border-b border-amber-200 pb-2">
+              अनुष्ठान चुनें:
+            </h3>
+            <div class="space-y-2">
+              ${SAMAGRI_DATA.map((s, idx) => `
+                <button onclick="selectSamagriPuja('${s.id}')" class="w-full text-left p-3 rounded-2xl border text-xs font-bold transition flex items-center justify-between ${idx === 0 ? 'bg-amber-100 border-amber-400 text-red-950 shadow-xs' : 'bg-white border-amber-200 text-gray-800 hover:bg-amber-50'}">
+                  <span>${s.name}</span>
+                  <span class="text-[10px] text-amber-900 bg-amber-50 px-2 py-0.5 rounded-full shrink-0 ml-1">${s.items.length} वस्तुएं</span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Right: Items Checklist -->
+          <div class="md:col-span-2 glass-ribbon rounded-3xl p-5 border-2 border-amber-300/80 shadow-md space-y-3 font-devanagari">
+            <div id="samagri-checklist-items">
+              <!-- Rendered via selectSamagriPuja -->
+            </div>
+            <div class="pt-4 border-t border-amber-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <span class="text-gray-600 font-medium">सामग्री एकत्र करने के पश्चात आचार्य जी से मुहूर्त की पुष्टि करें।</span>
+              <div class="flex gap-2">
+                <button onclick="copySamagriWhatsApp()" class="glass-btn-3d glass-btn-3d-emerald px-4 py-2 rounded-xl text-xs font-black text-white">
+                  WhatsApp शेयर
+                </button>
+                <a href="#booking" class="glass-btn-3d glass-btn-3d-saffron px-4 py-2 rounded-xl text-xs font-black text-white">
+                  यह पूजा बुक करें
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  // --- VIEW: DAKSHINA POLICY (दक्षिणा एवं सहयोग नीति) ---
+  dakshina() {
+    return `
+      <div class="space-y-6">
+        <div class="glass-ribbon rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-amber-300/80 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-950 px-3 py-1 rounded-full text-xs font-black border border-amber-300">
+              <span>🪙</span>
+              <span>शास्त्र सम्मत नीति</span>
+            </div>
+            <h2 class="font-heading font-black text-2xl sm:text-3xl text-red-950">
+              दक्षिणा, दान एवं सहयोग नीति
+            </h2>
+            <p class="text-xs sm:text-sm font-bold text-amber-900">
+              शास्त्र सम्मत वैदिक अनुष्ठानों में दक्षिणा का महत्व एवं पारदर्शी सहयोग व्यवस्था
+            </p>
+          </div>
+          <a href="tel:+917309441019" class="glass-btn-3d glass-btn-3d-emerald px-5 py-3 rounded-2xl text-xs sm:text-sm font-black text-white shrink-0">
+            📞 7309441019 पर संपर्क
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 font-devanagari">
+          <!-- Left: Principles -->
+          <div class="glass-ribbon rounded-3xl p-6 border-2 border-amber-300/80 shadow-md space-y-4">
+            <h3 class="font-heading font-black text-base sm:text-lg text-red-950 border-b border-amber-200 pb-2">
+              📜 शास्त्रोक्त दक्षिणा का शास्त्रीय विधान
+            </h3>
+            <div class="p-4 bg-amber-50/80 rounded-2xl border border-amber-200 text-xs italic font-bold text-amber-950">
+              "यथाशक्ति प्रदातव्यं दक्षिणा फलदायिनी। यजमानस्य श्रद्धया कर्म सिद्ध्यति नान्यथा॥"
+            </div>
+            <p class="text-xs text-gray-700 leading-relaxed">
+              सनातन धर्म में वेद-विद्या, कथा वाचन एवं कर्मकाण्ड का कोई व्यापारिक मूल्य नहीं हो सकता। दक्षिणा यजमान की निष्ठा, श्रद्धा एवं सामर्थ्य के अनुसार स्वेच्छा से अर्पित किया जाने वाला पवित्र संकल्प है।
+            </p>
+            <ul class="space-y-2 text-xs text-gray-800">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-600 font-bold">✓</span>
+                <span><strong>स्वेच्छा दक्षिणा:</strong> किसी भी यजमान पर कोई अनिवार्य शुल्क या दबाव नहीं होता।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-600 font-bold">✓</span>
+                <span><strong>सत्पात्रे दानम्:</strong> प्राप्त सहयोग का उपयोग वेद विद्यालय, गौ सेवा, अन्नक्षेत्र एवं सनातन धर्म के प्रचार में होता है।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-600 font-bold">✓</span>
+                <span><strong>पारदर्शिता:</strong> प्रत्येक संकल्प की रसीद एवं संदर्भ कोड सुरक्षित प्रदान किया जाता है।</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Dakshina Sankalp Form -->
+          <div class="glass-ribbon rounded-3xl p-6 border-2 border-amber-300/80 shadow-md space-y-4">
+            <h3 class="font-heading font-black text-base sm:text-lg text-red-950 border-b border-amber-200 pb-2">
+              🪙 दक्षिणा एवं सहयोग संकल्प प्रपत्र
+            </h3>
+            <form id="dakshina-form" onsubmit="submitDakshinaOrder(event)" class="space-y-3 text-xs">
+              <div>
+                <label class="block font-bold text-amber-950 mb-1">श्रद्धालु / यजमान का नाम *</label>
+                <input type="text" id="dk-name" required placeholder="उदा. रमेश कुमार मिश्र" class="w-full p-2.5 rounded-xl border border-gray-300 bg-white">
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label class="block font-bold text-amber-950 mb-1">मोबाइल नंबर *</label>
+                  <input type="tel" id="dk-phone" required placeholder="10 अंकों का मोबाइल" class="w-full p-2.5 rounded-xl border border-gray-300 bg-white">
+                </div>
+                <div>
+                  <label class="block font-bold text-amber-950 mb-1">गोत्र (ऐच्छिक)</label>
+                  <input type="text" id="dk-gotra" placeholder="उदा. कश्यप / भारद्वाज" class="w-full p-2.5 rounded-xl border border-gray-300 bg-white">
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label class="block font-bold text-amber-950 mb-1">संकल्प राशि (₹)</label>
+                  <input type="number" id="dk-amount" placeholder="उदा. 1100, 2100" class="w-full p-2.5 rounded-xl border border-gray-300 bg-white font-bold">
+                </div>
+                <div>
+                  <label class="block font-bold text-amber-950 mb-1">सहयोग उद्देश्य</label>
+                  <select id="dk-purpose" class="w-full p-2.5 rounded-xl border border-gray-300 bg-white font-bold">
+                    <option value="कथा आयोजन दक्षिणा">कथा आयोजन दक्षिणा</option>
+                    <option value="रुद्राभिषेक दक्षिणा">रुद्राभिषेक दक्षिणा</option>
+                    <option value="अन्नक्षेत्र व गौ सेवा">अन्नक्षेत्र व गौ सेवा</option>
+                    <option value="वेद प्रचार व मन्दिर सेवा">वेद प्रचार व मन्दिर सेवा</option>
+                  </select>
+                </div>
+              </div>
+              <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-900 space-y-1">
+                <div><strong>UPI ID:</strong> 7309441019@upi</div>
+                <div><strong>PhonePe / GPay / Paytm:</strong> 7309441019</div>
+              </div>
+              <button type="submit" class="glass-btn-3d glass-btn-3d-saffron w-full py-3 rounded-xl font-black text-white text-xs">
+                🪙 दक्षिणा संकल्प दर्ज करें →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    `;
+  },
 };
 
 // ----------------------------------------------------------------------------
@@ -5060,6 +5708,7 @@ async function loadPrayers() {
 // 14. SAMAGRI CHECKLIST FUNCTIONS
 // ----------------------------------------------------------------------------
 function selectSamagriPuja(pujaId) {
+  APP_STATE.activeSamagriPujaId = pujaId;
   const puja = SAMAGRI_DATA.find(p => p.id === pujaId) || SAMAGRI_DATA[0];
   const container = document.getElementById('samagri-checklist-items');
   if (!container) return;
@@ -5161,7 +5810,19 @@ const VedicApp = {
       '#/': 'home',
       '#home': 'home',
       '#/home': 'home',
-      '#/about': 'home',
+      '#about': 'about',
+      '#/about': 'about',
+      '#katha-vachan': 'kathaVachan',
+      '#/katha-vachan': 'kathaVachan',
+      '#library': 'library',
+      '#/library': 'library',
+      '#events': 'events',
+      '#/events': 'events',
+      '#samagri': 'samagri',
+      '#/samagri': 'samagri',
+      '#dakshina': 'dakshina',
+      '#/dakshina': 'dakshina',
+      '#astrology': 'milan',
       '#/astrology': 'milan',
       '#milan': 'milan',
       '#/milan': 'milan',
@@ -5170,12 +5831,14 @@ const VedicApp = {
       '#/muhurat': 'muhurat',
       '#kundali': 'kundali',
       '#/kundali': 'kundali',
-      '#/mantras': 'satsang',
+      '#/mantras': 'jaap',
+      '#mantras': 'jaap',
       '#satsang': 'satsang',
       '#/satsang': 'satsang',
       '#jaap': 'jaap',
       '#/jaap': 'jaap',
       '#/live-darshan': 'templeLive',
+      '#live-darshan': 'templeLive',
       '#temple-live': 'templeLive',
       '#/temple-live': 'templeLive',
       '#acharya-live': 'acharyaLive',
@@ -5183,13 +5846,15 @@ const VedicApp = {
       '#/booking': 'booking',
       '#booking': 'booking',
       '#/puja-services': 'rituals',
+      '#puja-services': 'rituals',
       '#rituals': 'rituals',
       '#/rituals': 'rituals',
-      '#/samagri': 'rituals',
       '#tools': 'tools',
       '#/tools': 'tools',
       '#/admin': 'admin',
-      '#admin': 'admin'
+      '#admin': 'admin',
+      '#contact': 'about',
+      '#/contact': 'about'
     };
 
     const viewKey = routeMap[rawHash] || 'home';
@@ -5223,8 +5888,10 @@ const VedicApp = {
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
       // Post-render lifecycle hooks
-      if (viewKey === 'acharyaLive') loadPrayers();
-      if (viewKey === 'rituals') selectSamagriPuja('rudrabhishek');
+            if (viewKey === 'acharyaLive' || viewKey === 'templeLive') loadPrayers();
+      if (viewKey === 'rituals' || viewKey === 'samagri') selectSamagriPuja('rudrabhishek');
+      if (viewKey === 'library') searchLibraryArticles();
+      if (viewKey === 'events') loadEventsTimeline();
       if (viewKey === 'admin') loadAdminTables();
     }
   },
