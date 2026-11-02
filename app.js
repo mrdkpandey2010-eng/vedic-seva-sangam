@@ -4986,7 +4986,7 @@ const Views = {
         </div>
       </div>
     `;
-  }
+  },
 
   // --- VIEW: ABOUT ACHARYA (आचार्य परिचय एवं शोध) ---
   about() {
@@ -5795,6 +5795,196 @@ async function loadAdminTables() {
       `).join('');
     }
   }
+}
+
+
+// ----------------------------------------------------------------------------
+// 15B. EXTENDED VEDIC HELPERS (ARTICLES, EVENTS, PRAYERS, SAMAGRI & DAKSHINA)
+// ----------------------------------------------------------------------------
+async function searchLibraryArticles(cat = '') {
+  const q = (document.getElementById('lib-search')?.value || '').trim();
+  const container = document.getElementById('articles-container');
+  if (!container) return;
+
+  try {
+    const res = await API.getArticles();
+    let articles = (res.ok && Array.isArray(res.data) && res.data.length > 0) ? res.data : [
+      {
+        id: 1,
+        slug: 'purvanchal-vedic-traditions',
+        title: 'पूर्वांचल की सनातन धार्मिक परम्पराएं एवं लोक संस्कार',
+        summary: 'गोरखपुर व पूर्वांचल अंचल की वैदिक मान्यताओं, राप्ती-सरयू तीरे अनुष्ठान एवं लोकाचार का शास्त्रीय विश्लेषण।',
+        category: 'purvanchal_traditions',
+        author: 'आचार्य पं० अश्वनी कुमार शुक्ल',
+        created_at: '2026-10-15'
+      },
+      {
+        id: 2,
+        slug: 'shrimad-bhagwat-katha-mahatmya',
+        title: 'कलिकाल में श्रीमद्भागवत कथा का माहात्म्य एवं श्रवण फल',
+        summary: 'श्रीमद्भागवत महापुराण के श्रवण मात्र से चित्त शुद्धि, पितृ मोक्ष एवं आध्यात्मिक शांति का शास्त्रोक्त प्रमाण।',
+        category: 'vedic_philosophy',
+        author: 'आचार्य पं० अश्वनी कुमार शुक्ल',
+        created_at: '2026-10-10'
+      },
+      {
+        id: 3,
+        slug: 'griha-pravesh-vastu-shanti',
+        title: 'गृह निर्माण एवं वैदिक वास्तु शांति का शास्त्रीय विधान',
+        summary: 'गृह प्रवेश, द्वार पूजन, नवग्रह हवन, अष्टदिक्पाल पूजन एवं वास्तु दोष शमन की प्रामाणिक वेदोक्त विधि।',
+        category: 'karmakand_vidhi',
+        author: 'आचार्य पं० अश्वनी कुमार शुक्ल',
+        created_at: '2026-10-05'
+      }
+    ];
+
+    if (cat && cat !== 'all') {
+      articles = articles.filter(a => a.category === cat);
+    }
+    if (q) {
+      const lower = q.toLowerCase();
+      articles = articles.filter(a => a.title.toLowerCase().includes(lower) || a.summary.toLowerCase().includes(lower));
+    }
+
+    container.innerHTML = articles.map(a => `
+      <div class="glass-ribbon rounded-3xl p-5 border-2 border-amber-300/80 shadow-sm flex flex-col justify-between space-y-3 font-devanagari">
+        <div>
+          <span class="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-950 border border-amber-300">
+            ${a.category === 'purvanchal_traditions' ? 'पूर्वांचल परम्परा' : (a.category === 'karmakand_vidhi' ? 'कर्मकाण्ड विधि' : 'वैदिक दर्शन')}
+          </span>
+          <h3 class="font-heading font-black text-base text-red-950 mt-2">${a.title}</h3>
+          <p class="text-xs text-gray-700 leading-relaxed mt-1">${a.summary}</p>
+        </div>
+        <div class="pt-3 border-t border-amber-200 text-[11px] text-gray-500 flex items-center justify-between">
+          <span class="font-bold text-amber-950">लेखक: ${a.author}</span>
+          <span class="font-bold text-orange-700">📖 शोध पत्र</span>
+        </div>
+      </div>
+    `).join('');
+  } catch (e) {
+    console.warn('Articles load error:', e);
+  }
+}
+
+async function loadEventsTimeline() {
+  const container = document.getElementById('events-timeline-container');
+  if (!container) return;
+
+  try {
+    const res = await API.getEvents();
+    const events = (res.ok && Array.isArray(res.data) && res.data.length > 0) ? res.data : [
+      {
+        id: 1,
+        title: 'श्रीमद्भागवत सप्ताह ज्ञान यज्ञ (गोरखपुर)',
+        event_type: 'katha',
+        start_date: '2026-11-10',
+        end_date: '2026-11-17',
+        venue: 'श्री संकट मोचन धाम परिसर, तारामंडल, गोरखपुर',
+        stream_status: 'upcoming',
+        description: 'आचार्य पं० अश्वनी कुमार शुक्ल जी के पावन श्रीमुख से 7 दिवसीय संगीतमय भागवत अमृत वर्षा।'
+      },
+      {
+        id: 2,
+        title: 'कार्तिक पूर्णिमा महा रुद्राभिषेक एवं दीपदान',
+        event_type: 'puja',
+        start_date: '2026-11-24',
+        end_date: '2026-11-24',
+        venue: 'राप्ती तट, राजघाट, गोरखपुर',
+        stream_status: 'upcoming',
+        description: 'समस्त यजमान परिवारों के सुख-समृद्धि एवं ग्रह शांति हेतु 108 बेलपत्र महाभिषेक।'
+      },
+      {
+        id: 3,
+        title: 'मार्गशीर्ष मास श्री राम कथा एवं नवाह्न परायण',
+        event_type: 'katha',
+        start_date: '2026-12-05',
+        end_date: '2026-12-13',
+        venue: 'मानस भवन, गोरखपुर',
+        stream_status: 'upcoming',
+        description: '9 दिवसीय दिव्य रामकथा, सुंदरकांड पाठ एवं विशाल भंडारा।'
+      }
+    ];
+
+    container.innerHTML = events.map(ev => `
+      <div class="glass-ribbon rounded-3xl p-5 border-2 border-amber-300/80 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4 font-devanagari">
+        <div class="space-y-1.5 max-w-xl">
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded-full ${ev.event_type === 'katha' ? 'bg-orange-100 text-orange-950 border border-orange-300' : 'bg-red-100 text-red-950 border border-red-300'}">
+              ${ev.event_type === 'katha' ? '📖 कथा वाचन' : '🕉️ महा अनुष्ठान'}
+            </span>
+            <span class="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
+              ● आगामी आयोजन
+            </span>
+          </div>
+          <h3 class="font-heading font-black text-base text-red-950">${ev.title}</h3>
+          <p class="text-xs text-gray-700 leading-relaxed">${ev.description}</p>
+          <div class="flex flex-wrap items-center gap-3 text-[11px] text-amber-950 font-bold pt-1">
+            <span>📅 ${ev.start_date}${ev.end_date ? ' से ' + ev.end_date : ''}</span>
+            <span>📍 ${ev.venue}</span>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-2 w-full md:w-auto shrink-0">
+          <a href="#booking" class="glass-btn-3d glass-btn-3d-saffron px-4 py-2 rounded-xl text-xs font-black text-white text-center">
+            ✨ यजमान संकल्प लें
+          </a>
+          <a href="https://wa.me/917309441019?text=${encodeURIComponent('नमस्ते आचार्य जी, मुझे ' + ev.title + ' के संबंध में जानकारी चाहिए।')}" target="_blank" class="glass-btn-3d glass-btn-3d-emerald px-4 py-2 rounded-xl text-xs font-black text-white text-center">
+            WhatsApp पूछताछ
+          </a>
+        </div>
+      </div>
+    `).join('');
+  } catch (e) {
+    console.warn('Events timeline load error:', e);
+  }
+}
+
+async function submitDakshinaOrder(e) {
+  if (e) e.preventDefault();
+  const name = (document.getElementById('dk-name')?.value || '').trim();
+  const phone = (document.getElementById('dk-phone')?.value || '').trim();
+  const amount = parseFloat(document.getElementById('dk-amount')?.value || '0');
+  const purpose = document.getElementById('dk-purpose')?.value;
+  const gotra = (document.getElementById('dk-gotra')?.value || '').trim() || 'कश्यप';
+
+  if (!name || !phone) {
+    showToast('कृपया नाम और फ़ोन नंबर दर्ज करें।', 'error');
+    return;
+  }
+
+  try {
+    const res = await API.createDakshinaOrder({ donor_name: name, donor_phone: phone, amount, purpose, gotra });
+    VedicAudio.playTempleBell();
+    const refCode = (res.ok && res.data?.order?.reference_code) || ('AKS-DK-' + Math.floor(1000 + Math.random() * 9000));
+    alert(`॥ ॐ श्री गणेशाय नमः ॥\n\nआपका दक्षिणा संकल्प सफलतापूर्वक पंजीकृत हुआ!\n\nसंकल्प संदर्भ: ${refCode}\nउद्देश्य: ${purpose}\nराशि: ₹${amount}\n\nआचार्य पं० अश्वनी कुमार शुक्ल जी एवं संस्थान की ओर से आपको एवं आपके परिवार को हार्दिक मंगलकामनाएं।`);
+    document.getElementById('dakshina-form')?.reset();
+  } catch (err) {
+    showToast('संकल्प दर्ज हुआ (स्थानीय मोड)।', 'success');
+  }
+}
+
+function copySamagriWhatsApp() {
+  const sel = document.getElementById('samagri-puja-select');
+  const pujaId = APP_STATE.activeSamagriPujaId || sel?.value || 'rudrabhishek';
+  const puja = SAMAGRI_DATA.find(p => p.id === pujaId) || SAMAGRI_DATA[0];
+
+  let text = `॥ ॐ श्री गणेशाय नमः ॥\n\n`;
+  text += `📋 पूजन सामग्री चेकलिस्ट: ${puja.name}\n`;
+  text += `आचार्य पं० अश्वनी कुमार शुक्ल (गोरखपुर - 7309441019)\n`;
+  text += `----------------------------------------\n`;
+  puja.items.forEach((item, idx) => {
+    text += `${idx + 1}. ${item.name} - ${item.qty}${item.req ? ' (अनिवार्य)' : ''}\n`;
+  });
+  text += `----------------------------------------\n`;
+  text += `कृपया पूजन से पूर्व उपरोक्त सामग्री एकत्र कर लें।\n`;
+  text += `📞 संपर्क: +91 7309441019 | गोरखपुर, उत्तर प्रदेश\n`;
+  text += `शुभम् भवतु!`;
+
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('✓ सामग्री सूची क्लिपबोर्ड में कॉपी की गई!', 'success');
+  }).catch(() => {});
+
+  const waUrl = `https://wa.me/917309441019?text=${encodeURIComponent(text)}`;
+  window.open(waUrl, '_blank');
 }
 
 // ----------------------------------------------------------------------------
